@@ -28,7 +28,7 @@ const DB = (function() {
   const SEED_REVIEWS = [
     { id: 1, reviewer_name: "Tariq M.", rating: 5, comment: "Hands down the most authentic Biryani in town. The rice grains are perfectly separated and the meat is tender enough to fall off the bone. Been coming here since 2016!", diner_type: "Regular Patron • 8 Yrs", avatar_initials: "TM", created_at: "2026-08-15 19:30" },
     { id: 2, reviewer_name: "Ayesha K.", rating: 5, comment: "Their Chicken Karahi and Garlic Naan together with the Biryani make the ultimate weekend family feast. Outstanding service, warm aroma, and unmistakable pride.", diner_type: "Food Enthusiast", avatar_initials: "AK", created_at: "2026-08-22 20:15" },
-    { id: 3, reviewer_name: "Bilal S.", 5, comment: "Ordered takeaway for our family party of 25 people. Everyone was raving about the BBQ platter and Mutton Biryani. Hot, fresh, and exceptionally generous portions.", diner_type: "Family Host", avatar_initials: "BS", created_at: "2026-08-29 18:45" }
+    { id: 3, reviewer_name: "Bilal S.", rating: 5, comment: "Ordered takeaway for our family party of 25 people. Everyone was raving about the BBQ platter and Mutton Biryani. Hot, fresh, and exceptionally generous portions.", diner_type: "Family Host", avatar_initials: "BS", created_at: "2026-08-29 18:45" }
   ];
 
   // Helper for localStorage initial seed

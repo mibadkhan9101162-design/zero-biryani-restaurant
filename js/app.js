@@ -7,9 +7,25 @@
 (function() {
   'use strict';
 
+  // Initial Seed Dishes for instant synchronous rendering
+  const DEFAULT_DISHES = [
+    { id: 1, name: "Signature Chicken Biryani", category: "biryani", price: 15.99, description: "Fragrant aged basmati rice layered with spiced marinated chicken, saffron, and golden fried onions.", image: "assets/images/hero-biryani.png", badge: "Popular", spice_level: "Medium", serves: "Matka Dum Portioned", is_popular: 1 },
+    { id: 2, name: "Mutton Biryani", category: "biryani", price: 18.99, description: "Rich, tender slow-cooked bone-in mutton with aromatic saffron rice and whole fragrant garam masala.", image: "assets/images/hero-biryani.png", badge: "Signature", spice_level: "Medium", serves: "4-Hour Dum Pukht", is_popular: 1 },
+    { id: 3, name: "Karachi Beef Biryani", category: "biryani", price: 16.99, description: "Deep, savory spiced beef layered in traditional Karachi-style dum pot with seasoned aloo and dried plum hints.", image: "assets/images/hero-biryani.png", badge: "Karachi Spicy", spice_level: "Karachi Spicy", serves: "Dum Sealed Pot", is_popular: 0 },
+    { id: 4, name: "Chicken Karahi", category: "karahi", price: 21.50, description: "Wok-cooked chicken in freshly pounded tomatoes, ginger juliennes, green chilies, and freshly cracked black pepper.", image: "assets/images/chicken-karahi.png", badge: "Chef Special", spice_level: "Medium", serves: "Cast Iron Wok", is_popular: 1 },
+    { id: 5, name: "Mutton Karahi", category: "karahi", price: 26.00, description: "Succulent baby mutton simmered in cast iron karahi with crushed garlic, whole coriander, and traditional Lahori spices.", image: "assets/images/chicken-karahi.png", badge: "Desi Ghee", spice_level: "Karachi Spicy", serves: "Desi Ghee Finish", is_popular: 0 },
+    { id: 6, name: "Charcoal Chicken Tikka", category: "bbq", price: 12.50, description: "Smoky, char-grilled chicken quarters marinated in Kashmiri red chili, cultured yogurt, and roasted ground spices.", image: "assets/images/bbq-platter.png", badge: "Smoky", spice_level: "Mild", serves: "Open Charcoal Pit", is_popular: 0 },
+    { id: 7, name: "Seekh Kabab", category: "bbq", price: 13.99, description: "Melt-in-mouth minced beef and lamb skewers with fresh mint, coriander, ginger, and slow-roasted cumin.", image: "assets/images/bbq-platter.png", badge: "Popular", spice_level: "Medium", serves: "4 Skewers", is_popular: 1 },
+    { id: 8, name: "Royal Chicken Handi", category: "karahi", price: 19.99, description: "Silky boneless chicken simmered in rich cashew and cream gravy in a traditional earthen clay pot.", image: "assets/images/chicken-karahi.png", badge: "Mild Creamy", spice_level: "Mild", serves: "Clay Pot Slow Cooked", is_popular: 0 },
+    { id: 9, name: "Mixed BBQ Platter", category: "bbq", price: 34.50, description: "Generous assortment of Seekh Kababs, Chicken Tikka boti, Malai boti, served with mint chutney and warm naan.", image: "assets/images/bbq-platter.png", badge: "Feast", spice_level: "Medium", serves: "Serves 3-4", is_popular: 1 },
+    { id: 10, name: "Garlic & Fresh Naan", category: "sides", price: 3.99, description: "Clay oven baked flatbreads brushed with clarified desi ghee, minced fresh garlic, and garden cilantro.", image: "assets/images/takeaway-box.png", badge: "Fresh Baked", spice_level: "Mild", serves: "Clay Oven Fresh", is_popular: 0 },
+    { id: 11, name: "Fresh Raita & Kachumber Salad", category: "sides", price: 4.50, description: "Cooling roasted cumin and mint whipped yogurt accompanied by diced crisp cucumbers, red onions, and lemon.", image: "assets/images/takeaway-box.png", badge: "Cooling", spice_level: "Mild", serves: "Vegetarian Refresh", is_popular: 0 },
+    { id: 12, name: "Gulab Jamun with Saffron Rabri", category: "sides", price: 6.50, description: "Warm golden dumplings steeped in cardamom sugar syrup, topped with rich thickened saffron rabri milk.", image: "assets/images/takeaway-box.png", badge: "Sweet", spice_level: "Mild", serves: "Royal Dessert", is_popular: 0 }
+  ];
+
   // State
   const state = {
-    dishes: [],
+    dishes: [...DEFAULT_DISHES],
     cart: [],
     currentCategory: 'all',
     searchQuery: '',
@@ -1060,8 +1076,13 @@
       initElements();
       bindEvents();
       loadCartFromStorage();
-      await loadMenu();
-      await loadReviews();
+      renderDishes();
+      try {
+        await loadMenu();
+        await loadReviews();
+      } catch(e) {
+        console.warn("Async load notice:", e);
+      }
       console.log("Zero Biryani application initialized.");
     },
     toggleCart: toggleCartDrawer,

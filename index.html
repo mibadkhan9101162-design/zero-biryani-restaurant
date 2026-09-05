@@ -353,7 +353,355 @@
 
         <!-- Dynamic Dishes Grid (Managed by app.js / db.js) -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-lg" id="dishes-grid">
-          <!-- Populated dynamically -->
+          
+          <!-- Dish 1 -->
+          <div class="dish-item biryani bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all flex flex-col group border border-outline-variant/10">
+            <div class="relative h-56 overflow-hidden cursor-pointer" onclick="window.App.openDishModal(1)">
+              <img alt="Signature Chicken Biryani" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="assets/images/hero-biryani.png">
+              <span class="absolute top-3 left-3 bg-secondary text-on-secondary px-space-xs py-1 rounded font-label-caps text-label-caps uppercase tracking-wider shadow">Popular</span>
+              <span class="absolute bottom-3 right-3 bg-inverse-surface/85 backdrop-blur text-primary-fixed px-space-sm py-1 rounded font-headline-md text-headline-md shadow">$15.99</span>
+            </div>
+            <div class="p-space-md flex-1 flex flex-col justify-between">
+              <div>
+                <h3 class="font-headline-md text-headline-md text-on-surface cursor-pointer hover:text-primary transition-colors font-bold" onclick="window.App.openDishModal(1)">Signature Chicken Biryani</h3>
+                <p class="font-body-md text-body-md text-on-surface-variant mt-space-2xs">Fragrant aged basmati rice layered with spiced marinated chicken, saffron, and golden fried onions.</p>
+              </div>
+              <div class="mt-space-md pt-space-xs flex items-center justify-between">
+                <span class="font-label-sm text-label-sm text-primary flex items-center gap-1 font-semibold">
+                  <span class="material-symbols-outlined text-[14px]">local_dining</span> Matka Dum Portioned
+                </span>
+                <div class="flex items-center gap-2">
+                  <button onclick="window.App.openDishModal(1)" class="p-1.5 text-outline hover:text-primary transition-colors" title="Customize">
+                    <span class="material-symbols-outlined text-[20px]">tune</span>
+                  </button>
+                  <button onclick="window.App.quickAddToCart(1)" class="px-space-md py-space-2xs bg-primary-container text-on-primary-container hover:bg-primary hover:text-on-primary font-label-md text-label-md rounded transition-all flex items-center gap-1 shadow-sm font-bold btn-gold-glow">
+                    <span>Add</span>
+                    <span class="material-symbols-outlined text-[16px]">add</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dish 2 -->
+          <div class="dish-item biryani bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all flex flex-col group border border-outline-variant/10">
+            <div class="relative h-56 overflow-hidden cursor-pointer" onclick="window.App.openDishModal(2)">
+              <img alt="Mutton Biryani" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="assets/images/hero-biryani.png">
+              <span class="absolute top-3 left-3 bg-primary text-on-primary px-space-xs py-1 rounded font-label-caps text-label-caps uppercase tracking-wider shadow">Signature</span>
+              <span class="absolute bottom-3 right-3 bg-inverse-surface/85 backdrop-blur text-primary-fixed px-space-sm py-1 rounded font-headline-md text-headline-md shadow">$18.99</span>
+            </div>
+            <div class="p-space-md flex-1 flex flex-col justify-between">
+              <div>
+                <h3 class="font-headline-md text-headline-md text-on-surface cursor-pointer hover:text-primary transition-colors font-bold" onclick="window.App.openDishModal(2)">Mutton Biryani</h3>
+                <p class="font-body-md text-body-md text-on-surface-variant mt-space-2xs">Rich, tender slow-cooked bone-in mutton with aromatic saffron rice and whole fragrant garam masala.</p>
+              </div>
+              <div class="mt-space-md pt-space-xs flex items-center justify-between">
+                <span class="font-label-sm text-label-sm text-primary flex items-center gap-1 font-semibold">
+                  <span class="material-symbols-outlined text-[14px]">timer</span> 4-Hour Dum Pukht
+                </span>
+                <div class="flex items-center gap-2">
+                  <button onclick="window.App.openDishModal(2)" class="p-1.5 text-outline hover:text-primary transition-colors" title="Customize">
+                    <span class="material-symbols-outlined text-[20px]">tune</span>
+                  </button>
+                  <button onclick="window.App.quickAddToCart(2)" class="px-space-md py-space-2xs bg-primary-container text-on-primary-container hover:bg-primary hover:text-on-primary font-label-md text-label-md rounded transition-all flex items-center gap-1 shadow-sm font-bold btn-gold-glow">
+                    <span>Add</span>
+                    <span class="material-symbols-outlined text-[16px]">add</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dish 3 -->
+          <div class="dish-item biryani bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all flex flex-col group border border-outline-variant/10">
+            <div class="relative h-56 overflow-hidden cursor-pointer" onclick="window.App.openDishModal(3)">
+              <img alt="Karachi Beef Biryani" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="assets/images/hero-biryani.png">
+              <span class="absolute top-3 left-3 bg-secondary text-on-secondary px-space-xs py-1 rounded font-label-caps text-label-caps uppercase tracking-wider shadow">Karachi Spicy</span>
+              <span class="absolute bottom-3 right-3 bg-inverse-surface/85 backdrop-blur text-primary-fixed px-space-sm py-1 rounded font-headline-md text-headline-md shadow">$16.99</span>
+            </div>
+            <div class="p-space-md flex-1 flex flex-col justify-between">
+              <div>
+                <h3 class="font-headline-md text-headline-md text-on-surface cursor-pointer hover:text-primary transition-colors font-bold" onclick="window.App.openDishModal(3)">Karachi Beef Biryani</h3>
+                <p class="font-body-md text-body-md text-on-surface-variant mt-space-2xs">Deep, savory spiced beef layered in traditional Karachi-style dum pot with seasoned aloo and dried plum hints.</p>
+              </div>
+              <div class="mt-space-md pt-space-xs flex items-center justify-between">
+                <span class="font-label-sm text-label-sm text-primary flex items-center gap-1 font-semibold">
+                  <span class="material-symbols-outlined text-[14px]">local_fire_department</span> Dum Sealed Pot
+                </span>
+                <div class="flex items-center gap-2">
+                  <button onclick="window.App.openDishModal(3)" class="p-1.5 text-outline hover:text-primary transition-colors" title="Customize">
+                    <span class="material-symbols-outlined text-[20px]">tune</span>
+                  </button>
+                  <button onclick="window.App.quickAddToCart(3)" class="px-space-md py-space-2xs bg-primary-container text-on-primary-container hover:bg-primary hover:text-on-primary font-label-md text-label-md rounded transition-all flex items-center gap-1 shadow-sm font-bold btn-gold-glow">
+                    <span>Add</span>
+                    <span class="material-symbols-outlined text-[16px]">add</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dish 4 -->
+          <div class="dish-item karahi bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all flex flex-col group border border-outline-variant/10">
+            <div class="relative h-56 overflow-hidden cursor-pointer" onclick="window.App.openDishModal(4)">
+              <img alt="Chicken Karahi" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="assets/images/chicken-karahi.png">
+              <span class="absolute top-3 left-3 bg-secondary text-on-secondary px-space-xs py-1 rounded font-label-caps text-label-caps uppercase tracking-wider shadow">Chef Special</span>
+              <span class="absolute bottom-3 right-3 bg-inverse-surface/85 backdrop-blur text-primary-fixed px-space-sm py-1 rounded font-headline-md text-headline-md shadow">$21.50</span>
+            </div>
+            <div class="p-space-md flex-1 flex flex-col justify-between">
+              <div>
+                <h3 class="font-headline-md text-headline-md text-on-surface cursor-pointer hover:text-primary transition-colors font-bold" onclick="window.App.openDishModal(4)">Chicken Karahi</h3>
+                <p class="font-body-md text-body-md text-on-surface-variant mt-space-2xs">Wok-cooked chicken in freshly pounded tomatoes, ginger juliennes, green chilies, and freshly cracked black pepper.</p>
+              </div>
+              <div class="mt-space-md pt-space-xs flex items-center justify-between">
+                <span class="font-label-sm text-label-sm text-primary flex items-center gap-1 font-semibold">
+                  <span class="material-symbols-outlined text-[14px]">skillet</span> Cast Iron Wok
+                </span>
+                <div class="flex items-center gap-2">
+                  <button onclick="window.App.openDishModal(4)" class="p-1.5 text-outline hover:text-primary transition-colors" title="Customize">
+                    <span class="material-symbols-outlined text-[20px]">tune</span>
+                  </button>
+                  <button onclick="window.App.quickAddToCart(4)" class="px-space-md py-space-2xs bg-primary-container text-on-primary-container hover:bg-primary hover:text-on-primary font-label-md text-label-md rounded transition-all flex items-center gap-1 shadow-sm font-bold btn-gold-glow">
+                    <span>Add</span>
+                    <span class="material-symbols-outlined text-[16px]">add</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dish 5 -->
+          <div class="dish-item karahi bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all flex flex-col group border border-outline-variant/10">
+            <div class="relative h-56 overflow-hidden cursor-pointer" onclick="window.App.openDishModal(5)">
+              <img alt="Mutton Karahi" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="assets/images/chicken-karahi.png">
+              <span class="absolute top-3 left-3 bg-primary text-on-primary px-space-xs py-1 rounded font-label-caps text-label-caps uppercase tracking-wider shadow">Desi Ghee</span>
+              <span class="absolute bottom-3 right-3 bg-inverse-surface/85 backdrop-blur text-primary-fixed px-space-sm py-1 rounded font-headline-md text-headline-md shadow">$26.00</span>
+            </div>
+            <div class="p-space-md flex-1 flex flex-col justify-between">
+              <div>
+                <h3 class="font-headline-md text-headline-md text-on-surface cursor-pointer hover:text-primary transition-colors font-bold" onclick="window.App.openDishModal(5)">Mutton Karahi</h3>
+                <p class="font-body-md text-body-md text-on-surface-variant mt-space-2xs">Succulent baby mutton simmered in cast iron karahi with crushed garlic, whole coriander, and traditional Lahori spices.</p>
+              </div>
+              <div class="mt-space-md pt-space-xs flex items-center justify-between">
+                <span class="font-label-sm text-label-sm text-primary flex items-center gap-1 font-semibold">
+                  <span class="material-symbols-outlined text-[14px]">restaurant</span> Desi Ghee Finish
+                </span>
+                <div class="flex items-center gap-2">
+                  <button onclick="window.App.openDishModal(5)" class="p-1.5 text-outline hover:text-primary transition-colors" title="Customize">
+                    <span class="material-symbols-outlined text-[20px]">tune</span>
+                  </button>
+                  <button onclick="window.App.quickAddToCart(5)" class="px-space-md py-space-2xs bg-primary-container text-on-primary-container hover:bg-primary hover:text-on-primary font-label-md text-label-md rounded transition-all flex items-center gap-1 shadow-sm font-bold btn-gold-glow">
+                    <span>Add</span>
+                    <span class="material-symbols-outlined text-[16px]">add</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dish 6 -->
+          <div class="dish-item bbq bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all flex flex-col group border border-outline-variant/10">
+            <div class="relative h-56 overflow-hidden cursor-pointer" onclick="window.App.openDishModal(6)">
+              <img alt="Charcoal Chicken Tikka" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="assets/images/bbq-platter.png">
+              <span class="absolute top-3 left-3 bg-secondary text-on-secondary px-space-xs py-1 rounded font-label-caps text-label-caps uppercase tracking-wider shadow">Smoky</span>
+              <span class="absolute bottom-3 right-3 bg-inverse-surface/85 backdrop-blur text-primary-fixed px-space-sm py-1 rounded font-headline-md text-headline-md shadow">$12.50</span>
+            </div>
+            <div class="p-space-md flex-1 flex flex-col justify-between">
+              <div>
+                <h3 class="font-headline-md text-headline-md text-on-surface cursor-pointer hover:text-primary transition-colors font-bold" onclick="window.App.openDishModal(6)">Charcoal Chicken Tikka</h3>
+                <p class="font-body-md text-body-md text-on-surface-variant mt-space-2xs">Smoky, char-grilled chicken quarters marinated in Kashmiri red chili, cultured yogurt, and roasted ground spices.</p>
+              </div>
+              <div class="mt-space-md pt-space-xs flex items-center justify-between">
+                <span class="font-label-sm text-label-sm text-primary flex items-center gap-1 font-semibold">
+                  <span class="material-symbols-outlined text-[14px]">outdoor_grill</span> Open Charcoal Pit
+                </span>
+                <div class="flex items-center gap-2">
+                  <button onclick="window.App.openDishModal(6)" class="p-1.5 text-outline hover:text-primary transition-colors" title="Customize">
+                    <span class="material-symbols-outlined text-[20px]">tune</span>
+                  </button>
+                  <button onclick="window.App.quickAddToCart(6)" class="px-space-md py-space-2xs bg-primary-container text-on-primary-container hover:bg-primary hover:text-on-primary font-label-md text-label-md rounded transition-all flex items-center gap-1 shadow-sm font-bold btn-gold-glow">
+                    <span>Add</span>
+                    <span class="material-symbols-outlined text-[16px]">add</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dish 7 -->
+          <div class="dish-item bbq bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all flex flex-col group border border-outline-variant/10">
+            <div class="relative h-56 overflow-hidden cursor-pointer" onclick="window.App.openDishModal(7)">
+              <img alt="Seekh Kabab" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="assets/images/bbq-platter.png">
+              <span class="absolute top-3 left-3 bg-secondary text-on-secondary px-space-xs py-1 rounded font-label-caps text-label-caps uppercase tracking-wider shadow">Popular</span>
+              <span class="absolute bottom-3 right-3 bg-inverse-surface/85 backdrop-blur text-primary-fixed px-space-sm py-1 rounded font-headline-md text-headline-md shadow">$13.99</span>
+            </div>
+            <div class="p-space-md flex-1 flex flex-col justify-between">
+              <div>
+                <h3 class="font-headline-md text-headline-md text-on-surface cursor-pointer hover:text-primary transition-colors font-bold" onclick="window.App.openDishModal(7)">Seekh Kabab</h3>
+                <p class="font-body-md text-body-md text-on-surface-variant mt-space-2xs">Melt-in-mouth minced beef and lamb skewers with fresh mint, coriander, ginger, and slow-roasted cumin.</p>
+              </div>
+              <div class="mt-space-md pt-space-xs flex items-center justify-between">
+                <span class="font-label-sm text-label-sm text-primary flex items-center gap-1 font-semibold">
+                  <span class="material-symbols-outlined text-[14px]">local_fire_department</span> 4 Skewers
+                </span>
+                <div class="flex items-center gap-2">
+                  <button onclick="window.App.openDishModal(7)" class="p-1.5 text-outline hover:text-primary transition-colors" title="Customize">
+                    <span class="material-symbols-outlined text-[20px]">tune</span>
+                  </button>
+                  <button onclick="window.App.quickAddToCart(7)" class="px-space-md py-space-2xs bg-primary-container text-on-primary-container hover:bg-primary hover:text-on-primary font-label-md text-label-md rounded transition-all flex items-center gap-1 shadow-sm font-bold btn-gold-glow">
+                    <span>Add</span>
+                    <span class="material-symbols-outlined text-[16px]">add</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dish 8 -->
+          <div class="dish-item karahi bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all flex flex-col group border border-outline-variant/10">
+            <div class="relative h-56 overflow-hidden cursor-pointer" onclick="window.App.openDishModal(8)">
+              <img alt="Royal Chicken Handi" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="assets/images/chicken-karahi.png">
+              <span class="absolute top-3 left-3 bg-primary text-on-primary px-space-xs py-1 rounded font-label-caps text-label-caps uppercase tracking-wider shadow">Mild Creamy</span>
+              <span class="absolute bottom-3 right-3 bg-inverse-surface/85 backdrop-blur text-primary-fixed px-space-sm py-1 rounded font-headline-md text-headline-md shadow">$19.99</span>
+            </div>
+            <div class="p-space-md flex-1 flex flex-col justify-between">
+              <div>
+                <h3 class="font-headline-md text-headline-md text-on-surface cursor-pointer hover:text-primary transition-colors font-bold" onclick="window.App.openDishModal(8)">Royal Chicken Handi</h3>
+                <p class="font-body-md text-body-md text-on-surface-variant mt-space-2xs">Silky boneless chicken simmered in rich cashew and cream gravy in a traditional earthen clay pot.</p>
+              </div>
+              <div class="mt-space-md pt-space-xs flex items-center justify-between">
+                <span class="font-label-sm text-label-sm text-primary flex items-center gap-1 font-semibold">
+                  <span class="material-symbols-outlined text-[14px]">dinner_dining</span> Clay Pot Slow Cooked
+                </span>
+                <div class="flex items-center gap-2">
+                  <button onclick="window.App.openDishModal(8)" class="p-1.5 text-outline hover:text-primary transition-colors" title="Customize">
+                    <span class="material-symbols-outlined text-[20px]">tune</span>
+                  </button>
+                  <button onclick="window.App.quickAddToCart(8)" class="px-space-md py-space-2xs bg-primary-container text-on-primary-container hover:bg-primary hover:text-on-primary font-label-md text-label-md rounded transition-all flex items-center gap-1 shadow-sm font-bold btn-gold-glow">
+                    <span>Add</span>
+                    <span class="material-symbols-outlined text-[16px]">add</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dish 9 -->
+          <div class="dish-item bbq bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all flex flex-col group border border-outline-variant/10">
+            <div class="relative h-56 overflow-hidden cursor-pointer" onclick="window.App.openDishModal(9)">
+              <img alt="Mixed BBQ Platter" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="assets/images/bbq-platter.png">
+              <span class="absolute top-3 left-3 bg-primary text-on-primary px-space-xs py-1 rounded font-label-caps text-label-caps uppercase tracking-wider shadow">Feast</span>
+              <span class="absolute bottom-3 right-3 bg-inverse-surface/85 backdrop-blur text-primary-fixed px-space-sm py-1 rounded font-headline-md text-headline-md shadow">$34.50</span>
+            </div>
+            <div class="p-space-md flex-1 flex flex-col justify-between">
+              <div>
+                <h3 class="font-headline-md text-headline-md text-on-surface cursor-pointer hover:text-primary transition-colors font-bold" onclick="window.App.openDishModal(9)">Mixed BBQ Platter</h3>
+                <p class="font-body-md text-body-md text-on-surface-variant mt-space-2xs">Generous assortment of Seekh Kababs, Chicken Tikka boti, Malai boti, served with mint chutney and warm naan.</p>
+              </div>
+              <div class="mt-space-md pt-space-xs flex items-center justify-between">
+                <span class="font-label-sm text-label-sm text-primary flex items-center gap-1 font-semibold">
+                  <span class="material-symbols-outlined text-[14px]">groups</span> Serves 3-4
+                </span>
+                <div class="flex items-center gap-2">
+                  <button onclick="window.App.openDishModal(9)" class="p-1.5 text-outline hover:text-primary transition-colors" title="Customize">
+                    <span class="material-symbols-outlined text-[20px]">tune</span>
+                  </button>
+                  <button onclick="window.App.quickAddToCart(9)" class="px-space-md py-space-2xs bg-primary-container text-on-primary-container hover:bg-primary hover:text-on-primary font-label-md text-label-md rounded transition-all flex items-center gap-1 shadow-sm font-bold btn-gold-glow">
+                    <span>Add</span>
+                    <span class="material-symbols-outlined text-[16px]">add</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dish 10 -->
+          <div class="dish-item sides bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all flex flex-col group border border-outline-variant/10">
+            <div class="relative h-56 overflow-hidden cursor-pointer" onclick="window.App.openDishModal(10)">
+              <img alt="Garlic & Fresh Naan" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="assets/images/takeaway-box.png">
+              <span class="absolute top-3 left-3 bg-secondary text-on-secondary px-space-xs py-1 rounded font-label-caps text-label-caps uppercase tracking-wider shadow">Fresh Baked</span>
+              <span class="absolute bottom-3 right-3 bg-inverse-surface/85 backdrop-blur text-primary-fixed px-space-sm py-1 rounded font-headline-md text-headline-md shadow">$3.99</span>
+            </div>
+            <div class="p-space-md flex-1 flex flex-col justify-between">
+              <div>
+                <h3 class="font-headline-md text-headline-md text-on-surface cursor-pointer hover:text-primary transition-colors font-bold" onclick="window.App.openDishModal(10)">Garlic &amp; Fresh Naan</h3>
+                <p class="font-body-md text-body-md text-on-surface-variant mt-space-2xs">Clay oven baked flatbreads brushed with clarified desi ghee, minced fresh garlic, and garden cilantro.</p>
+              </div>
+              <div class="mt-space-md pt-space-xs flex items-center justify-between">
+                <span class="font-label-sm text-label-sm text-primary flex items-center gap-1 font-semibold">
+                  <span class="material-symbols-outlined text-[14px]">bakery_dining</span> Clay Oven Fresh
+                </span>
+                <div class="flex items-center gap-2">
+                  <button onclick="window.App.openDishModal(10)" class="p-1.5 text-outline hover:text-primary transition-colors" title="Customize">
+                    <span class="material-symbols-outlined text-[20px]">tune</span>
+                  </button>
+                  <button onclick="window.App.quickAddToCart(10)" class="px-space-md py-space-2xs bg-primary-container text-on-primary-container hover:bg-primary hover:text-on-primary font-label-md text-label-md rounded transition-all flex items-center gap-1 shadow-sm font-bold btn-gold-glow">
+                    <span>Add</span>
+                    <span class="material-symbols-outlined text-[16px]">add</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dish 11 -->
+          <div class="dish-item sides bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all flex flex-col group border border-outline-variant/10">
+            <div class="relative h-56 overflow-hidden cursor-pointer" onclick="window.App.openDishModal(11)">
+              <img alt="Fresh Raita & Kachumber Salad" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="assets/images/takeaway-box.png">
+              <span class="absolute top-3 left-3 bg-primary text-on-primary px-space-xs py-1 rounded font-label-caps text-label-caps uppercase tracking-wider shadow">Cooling</span>
+              <span class="absolute bottom-3 right-3 bg-inverse-surface/85 backdrop-blur text-primary-fixed px-space-sm py-1 rounded font-headline-md text-headline-md shadow">$4.50</span>
+            </div>
+            <div class="p-space-md flex-1 flex flex-col justify-between">
+              <div>
+                <h3 class="font-headline-md text-headline-md text-on-surface cursor-pointer hover:text-primary transition-colors font-bold" onclick="window.App.openDishModal(11)">Fresh Raita &amp; Kachumber Salad</h3>
+                <p class="font-body-md text-body-md text-on-surface-variant mt-space-2xs">Cooling roasted cumin and mint whipped yogurt accompanied by diced crisp cucumbers, red onions, and lemon.</p>
+              </div>
+              <div class="mt-space-md pt-space-xs flex items-center justify-between">
+                <span class="font-label-sm text-label-sm text-primary flex items-center gap-1 font-semibold">
+                  <span class="material-symbols-outlined text-[14px]">eco</span> Vegetarian Refresh
+                </span>
+                <div class="flex items-center gap-2">
+                  <button onclick="window.App.openDishModal(11)" class="p-1.5 text-outline hover:text-primary transition-colors" title="Customize">
+                    <span class="material-symbols-outlined text-[20px]">tune</span>
+                  </button>
+                  <button onclick="window.App.quickAddToCart(11)" class="px-space-md py-space-2xs bg-primary-container text-on-primary-container hover:bg-primary hover:text-on-primary font-label-md text-label-md rounded transition-all flex items-center gap-1 shadow-sm font-bold btn-gold-glow">
+                    <span>Add</span>
+                    <span class="material-symbols-outlined text-[16px]">add</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dish 12 -->
+          <div class="dish-item sides bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all flex flex-col group border border-outline-variant/10">
+            <div class="relative h-56 overflow-hidden cursor-pointer" onclick="window.App.openDishModal(12)">
+              <img alt="Gulab Jamun with Saffron Rabri" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="assets/images/takeaway-box.png">
+              <span class="absolute top-3 left-3 bg-secondary text-on-secondary px-space-xs py-1 rounded font-label-caps text-label-caps uppercase tracking-wider shadow">Sweet</span>
+              <span class="absolute bottom-3 right-3 bg-inverse-surface/85 backdrop-blur text-primary-fixed px-space-sm py-1 rounded font-headline-md text-headline-md shadow">$6.50</span>
+            </div>
+            <div class="p-space-md flex-1 flex flex-col justify-between">
+              <div>
+                <h3 class="font-headline-md text-headline-md text-on-surface cursor-pointer hover:text-primary transition-colors font-bold" onclick="window.App.openDishModal(12)">Gulab Jamun with Saffron Rabri</h3>
+                <p class="font-body-md text-body-md text-on-surface-variant mt-space-2xs">Warm golden dumplings steeped in cardamom sugar syrup, topped with rich thickened saffron rabri milk.</p>
+              </div>
+              <div class="mt-space-md pt-space-xs flex items-center justify-between">
+                <span class="font-label-sm text-label-sm text-primary flex items-center gap-1 font-semibold">
+                  <span class="material-symbols-outlined text-[14px]">icecream</span> Royal Dessert
+                </span>
+                <div class="flex items-center gap-2">
+                  <button onclick="window.App.openDishModal(12)" class="p-1.5 text-outline hover:text-primary transition-colors" title="Customize">
+                    <span class="material-symbols-outlined text-[20px]">tune</span>
+                  </button>
+                  <button onclick="window.App.quickAddToCart(12)" class="px-space-md py-space-2xs bg-primary-container text-on-primary-container hover:bg-primary hover:text-on-primary font-label-md text-label-md rounded transition-all flex items-center gap-1 shadow-sm font-bold btn-gold-glow">
+                    <span>Add</span>
+                    <span class="material-symbols-outlined text-[16px]">add</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
 
       </div>
@@ -710,7 +1058,59 @@
 
         <!-- Dynamic Reviews Cards Grid (Managed by app.js / db.js) -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg" id="reviews-grid">
-          <!-- Populated from database -->
+          <div class="bg-surface-container-low p-space-xl rounded-2xl shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow border border-outline-variant/10">
+            <div>
+              <div class="flex items-center text-primary mb-space-sm">
+                <span class="material-symbols-outlined text-[18px]">star</span><span class="material-symbols-outlined text-[18px]">star</span><span class="material-symbols-outlined text-[18px]">star</span><span class="material-symbols-outlined text-[18px]">star</span><span class="material-symbols-outlined text-[18px]">star</span>
+              </div>
+              <p class="font-body-lg text-body-lg text-on-surface italic">
+                "Hands down the most authentic Biryani in town. The rice grains are perfectly separated and the meat is tender enough to fall off the bone. Been coming here since 2016!"
+              </p>
+            </div>
+            <div class="mt-space-lg pt-space-sm flex items-center gap-space-sm">
+              <div class="w-10 h-10 rounded-full bg-primary-fixed text-on-primary-fixed font-label-md flex items-center justify-center font-bold">TM</div>
+              <div>
+                <h5 class="font-label-md text-label-md text-on-surface font-bold">Tariq M.</h5>
+                <span class="font-label-sm text-label-sm text-outline">Regular Patron • 8 Yrs</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-surface-container-low p-space-xl rounded-2xl shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow border border-outline-variant/10">
+            <div>
+              <div class="flex items-center text-primary mb-space-sm">
+                <span class="material-symbols-outlined text-[18px]">star</span><span class="material-symbols-outlined text-[18px]">star</span><span class="material-symbols-outlined text-[18px]">star</span><span class="material-symbols-outlined text-[18px]">star</span><span class="material-symbols-outlined text-[18px]">star</span>
+              </div>
+              <p class="font-body-lg text-body-lg text-on-surface italic">
+                "Their Chicken Karahi and Garlic Naan together with the Biryani make the ultimate weekend family feast. Outstanding service, warm aroma, and unmistakable pride."
+              </p>
+            </div>
+            <div class="mt-space-lg pt-space-sm flex items-center gap-space-sm">
+              <div class="w-10 h-10 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-md flex items-center justify-center font-bold">AK</div>
+              <div>
+                <h5 class="font-label-md text-label-md text-on-surface font-bold">Ayesha K.</h5>
+                <span class="font-label-sm text-label-sm text-outline">Food Enthusiast</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-surface-container-low p-space-xl rounded-2xl shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow border border-outline-variant/10">
+            <div>
+              <div class="flex items-center text-primary mb-space-sm">
+                <span class="material-symbols-outlined text-[18px]">star</span><span class="material-symbols-outlined text-[18px]">star</span><span class="material-symbols-outlined text-[18px]">star</span><span class="material-symbols-outlined text-[18px]">star</span><span class="material-symbols-outlined text-[18px]">star</span>
+              </div>
+              <p class="font-body-lg text-body-lg text-on-surface italic">
+                "Ordered takeaway for our family party of 25 people. Everyone was raving about the BBQ platter and Mutton Biryani. Hot, fresh, and exceptionally generous portions."
+              </p>
+            </div>
+            <div class="mt-space-lg pt-space-sm flex items-center gap-space-sm">
+              <div class="w-10 h-10 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-md flex items-center justify-center font-bold">BS</div>
+              <div>
+                <h5 class="font-label-md text-label-md text-on-surface font-bold">Bilal S.</h5>
+                <span class="font-label-sm text-label-sm text-outline">Family Host</span>
+              </div>
+            </div>
+          </div>
         </div>
 
       </div>

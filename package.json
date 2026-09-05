@@ -1,0 +1,23 @@
+{
+  "name": "primary",
+  "version": "1.0.0",
+  "description": "> **10+ Years of Flavor. One Signature Biryani.**   > A full-stack interactive restaurant website featuring slow-cooked Dum Pukht cuisine, online food ordering, live shopping cart, table reservation engine, verified diner reviews, and a zero-dependency Python SQLite backend.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mibadkhan9101162-design/zero-biryani-restaurant.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mibadkhan9101162-design/zero-biryani-restaurant/issues"
+  },
+  "homepage": "https://github.com/mibadkhan9101162-design/zero-biryani-restaurant#readme",
+  "dependencies": {
+    "@vercel/analytics": "^2.0.1"
+  }
+}

@@ -1,0 +1,189 @@
+/* Custom Enhancements & Animations for Zero Biryani */
+
+:root {
+  --gold-primary: #d4a359;
+  --gold-dark: #7e5713;
+  --gold-light: #f2be71;
+  --ruby-accent: #a73738;
+  --charcoal-bg: #1d1b19;
+  --surface-warm: #fff8f4;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  display: block !important;
+}
+::-webkit-scrollbar-track {
+  background: #2a2725;
+}
+::-webkit-scrollbar-thumb {
+  background: #7e5713;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #d4a359;
+}
+
+/* Golden Glow Effects */
+.btn-gold-glow {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.btn-gold-glow:hover {
+  box-shadow: 0 0 20px rgba(212, 163, 89, 0.45);
+  transform: translateY(-2px);
+}
+
+.card-hover-lift {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.card-hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px -10px rgba(30, 28, 26, 0.15);
+}
+
+/* Modal and Drawer Transitions */
+.modal-overlay {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-content {
+  transform: scale(0.95) translateY(10px);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+  opacity: 0;
+}
+.modal-overlay.active .modal-content {
+  transform: scale(1) translateY(0);
+  opacity: 1;
+}
+
+/* Slide-Over Cart Drawer */
+.cart-drawer-overlay {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.35s ease, visibility 0.35s ease;
+  backdrop-filter: blur(4px);
+}
+.cart-drawer-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.cart-drawer-panel {
+  transform: translateX(100%);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.cart-drawer-overlay.active .cart-drawer-panel {
+  transform: translateX(0);
+}
+
+/* Floating Cart Badge Pulse */
+@keyframes cartBounce {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.25); }
+}
+.badge-bounce {
+  animation: cartBounce 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Toast Notification */
+.toast-container {
+  position: fixed;
+  top: 96px;
+  right: 24px;
+  z-index: 9999;
+  display: flex;
+  flex-col: column;
+  gap: 12px;
+  pointer-events: none;
+}
+.toast-item {
+  pointer-events: auto;
+  min-width: 300px;
+  max-width: 420px;
+  background: rgba(29, 27, 25, 0.95);
+  backdrop-filter: blur(10px);
+  color: #fff8f4;
+  border-left: 4px solid var(--gold-primary);
+  border-radius: 8px;
+  padding: 14px 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  transform: translateX(120%);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.35s ease;
+}
+.toast-item.show {
+  transform: translateX(0);
+}
+.toast-item.success {
+  border-left-color: #22c55e;
+}
+.toast-item.error {
+  border-left-color: #ef4444;
+}
+
+/* Star Rating Selector */
+.star-rating-input {
+  display: inline-flex;
+  flex-direction: row-reverse;
+  gap: 4px;
+}
+.star-rating-input input {
+  display: none;
+}
+.star-rating-input label {
+  cursor: pointer;
+  color: #d3c4b3;
+  font-size: 28px;
+  transition: color 0.15s ease, transform 0.15s ease;
+}
+.star-rating-input label:hover,
+.star-rating-input label:hover ~ label,
+.star-rating-input input:checked ~ label {
+  color: #f2be71;
+  transform: scale(1.1);
+}
+
+/* Order Tracker Step Pulse */
+.step-active-dot {
+  position: relative;
+}
+.step-active-dot::after {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 9999px;
+  background: rgba(212, 163, 89, 0.4);
+  animation: pulse-ring 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+}
+@keyframes pulse-ring {
+  0% { transform: scale(0.9); opacity: 1; }
+  100% { transform: scale(1.6); opacity: 0; }
+}
+
+/* Interactive Badge Pills */
+.tag-pill {
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.2s ease;
+}
+.tag-pill:hover {
+  opacity: 0.85;
+}

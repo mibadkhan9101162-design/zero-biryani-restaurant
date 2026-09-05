@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"tertiary-container":"#d0a558","on-error-container":"#93000a","tertiary-fixed":"#ffdea9","on-secondary":"#ffffff","primary-fixed-dim":"#f2be71","outline-variant":"#d3c4b3","inverse-on-surface":"#f6f0ec","on-primary-fixed-variant":"#614000","surface-container-highest":"#e7e1de","outline":"#817567","surface-container-lowest":"#ffffff","tertiary":"#7b5811","surface-container":"#f3ede9","surface-variant":"#e7e1de","secondary":"#a73738","inverse-primary":"#f2be71","on-primary-fixed":"#291800","primary-fixed":"#ffddb1","on-surface-variant":"#4f4538","primary-container":"#d4a359","on-tertiary-fixed-variant":"#5f4100","surface-dim":"#dfd9d5","primary":"#7e5713","surface-container-low":"#f9f2ef","surface-bright":"#fff8f4","tertiary-fixed-dim":"#edbf70","on-primary":"#ffffff","on-background":"#1d1b19","on-secondary-fixed-variant":"#862023","error-container":"#ffdad6","on-tertiary":"#ffffff","surface-container-high":"#ede7e3","error":"#ba1a1a","on-surface":"#1d1b19","on-tertiary-fixed":"#271900","surface":"#fff8f4","inverse-surface":"#32302e","secondary-fixed-dim":"#ffb3af","on-secondary-container":"#700e15","background":"#fff8f4","on-secondary-fixed":"#410005","on-error":"#ffffff","surface-tint":"#7e5713","secondary-fixed":"#ffdad7","secondary-container":"#fd7773","on-primary-container":"#583a00","on-tertiary-container":"#563b00"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"container-max-width":"1280px","space-xl":"2rem","grid-gutter-mobile":"1rem","grid-gutter-tablet":"1.5rem","page-margin-desktop":"4rem","page-margin-tablet":"2rem","space-xs":"0.5rem","space-3xl":"4.5rem","space-4xl":"6rem","grid-gutter-desktop":"2rem","space-md":"1rem","space-2xs":"0.25rem","space-lg":"1.5rem","space-2xl":"3rem","page-margin-mobile":"1.25rem","space-sm":"0.75rem"},fontFamily:{"display-hero":["Playfair Display"],"display-hero-mobile":["Playfair Display"],"label-sm":["Plus Jakarta Sans"],"label-caps":["Plus Jakarta Sans"],"subtitle-lg":["Plus Jakarta Sans"],"headline-md":["Playfair Display"],"headline-xl":["Playfair Display"],"body-md":["Plus Jakarta Sans"],"headline-xl-mobile":["Playfair Display"],"body-lg":["Plus Jakarta Sans"],"label-md":["Plus Jakarta Sans"],"headline-lg":["Playfair Display"]},fontSize:{"display-hero":["68px",{lineHeight:"76px",letterSpacing:"-0.02em",fontWeight:"600"}],"display-hero-mobile":["40px",{lineHeight:"48px",letterSpacing:"-0.01em",fontWeight:"600"}],"label-sm":["11px",{lineHeight:"14px",letterSpacing:"0.04em",fontWeight:"500"}],"label-caps":["11px",{lineHeight:"16px",letterSpacing:"0.18em",fontWeight:"700"}],"subtitle-lg":["18px",{lineHeight:"28px",letterSpacing:"0.01em",fontWeight:"500"}],"headline-md":["22px",{lineHeight:"28px",letterSpacing:"0.01em",fontWeight:"600"}],"headline-xl":["44px",{lineHeight:"52px",letterSpacing:"-0.015em",fontWeight:"500"}],"body-md":["14px",{lineHeight:"22px",letterSpacing:"0.01em",fontWeight:"400"}],"headline-xl-mobile":["32px",{lineHeight:"38px",letterSpacing:"0em",fontWeight:"500"}],"body-lg":["16px",{lineHeight:"26px",letterSpacing:"0em",fontWeight:"400"}],"label-md":["13px",{lineHeight:"18px",letterSpacing:"0.02em",fontWeight:"600"}],"headline-lg":["30px",{lineHeight:"38px",letterSpacing:"0em",fontWeight:"600"}]}}}}</script></head><body class="bg-background font-body-md text-body-md text-on-background selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 left-0 w-full z-50 bg-inverse-surface/90 backdrop-blur-md shadow-[0_4px_20px_-2px_rgba(30,28,26,0.15)]"><div class="h-20 max-w-[1280px] mx-auto px-page-margin-mobile md:px-page-margin-tablet lg:px-page-margin-desktop flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="Zero Biryani Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuChT0A2oQmMAAYCCOf16FLZ-Bp9IfGSkcHX9kEJiK-AqXHyLhRaiYTlCgCy07NrgaKlFtBt-1hLn4CgA0CUk8nnXh1LpCMAeww9unKMMNxNu-jDNxZkCmeif2Mz9t7dK0OGpeo2ZVPW1gALid7-iUInqRMpYfSp4JLMkdY8FIKH0UCi5O7DUE-a_Cn94MzCJpZf2Dhzycq-zANptqpLezqA9cf4L_5VsU3wemwGzvJ21gXaDq5Bc6iUew"/><div class="flex flex-col"><span class="font-headline-md text-headline-md text-primary-fixed tracking-tight">Zero Biryani</span><span class="font-label-caps text-label-caps text-tertiary-fixed-dim uppercase hidden sm:block">10+ Years Heritage</span></div></div><nav class="hidden lg:flex items-center gap-space-md" data-active-classes="bg-primary-container text-on-primary-container rounded-lg font-label-md text-label-md"><a aria-current="page" class="px-space-sm py-space-2xs transition-colors bg-primary-container text-on-primary-container rounded-lg font-label-md text-label-md" data-path="home" href="#">Home</a><a class="px-space-sm py-space-2xs text-inverse-on-surface hover:text-primary-fixed transition-colors font-label-md text-label-md" data-path="menu" href="#">Menu</a><a class="px-space-sm py-space-2xs text-inverse-on-surface hover:text-primary-fixed transition-colors font-label-md text-label-md" data-path="about-us" href="#">About Us</a><a class="px-space-sm py-space-2xs text-inverse-on-surface hover:text-primary-fixed transition-colors font-label-md text-label-md" data-path="gallery" href="#">Gallery</a><a class="px-space-sm py-space-2xs text-inverse-on-surface hover:text-primary-fixed transition-colors font-label-md text-label-md" data-path="reviews" href="#">Reviews</a><a class="px-space-sm py-space-2xs text-inverse-on-surface hover:text-primary-fixed transition-colors font-label-md text-label-md" data-path="contact" href="#">Contact</a></nav><div class="flex items-center gap-space-sm sm:gap-space-md"><a class="hidden sm:flex items-center gap-space-2xs text-primary-fixed hover:text-primary-fixed-dim transition-colors font-label-md text-label-md" href="tel:+923000000000"><span class="material-symbols-outlined text-[18px]">call</span><span>Call Handi</span></a><a class="px-space-md py-space-xs bg-secondary hover:bg-secondary-container text-on-secondary hover:text-on-secondary-container transition-all uppercase tracking-widest font-label-caps text-label-caps rounded-lg shadow-[0_2px_6px_-1px_rgba(30,28,26,0.2)]" data-path="menu" href="#">Order Now</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-background"><div class="flex flex-col w-full">
+<!-- 1. HERO SECTION -->
+<section class="relative bg-inverse-surface text-inverse-on-surface overflow-hidden pt-space-2xl pb-space-3xl lg:pb-space-4xl">
+<div class="absolute inset-0 opacity-15 pointer-events-none bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary-fixed-dim via-transparent to-transparent"></div>
+<div class="max-w-[1280px] mx-auto px-page-margin-mobile md:px-page-margin-tablet lg:px-page-margin-desktop relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-grid-gutter-desktop items-center">
+<!-- Hero Text Content -->
+<div class="lg:col-span-6 flex flex-col items-start gap-space-md">
+<!-- Heritage Badge -->
+<div class="inline-flex items-center gap-space-xs px-space-md py-space-2xs rounded-full bg-surface-variant/10 text-primary-fixed shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-primary-fixed">star</span>
+<span class="font-label-caps text-label-caps tracking-widest text-primary-fixed uppercase">10+ Years of Serving Great Taste</span>
+</div>
+<!-- Headline -->
+<h1 class="font-display-hero text-headline-xl lg:text-display-hero text-inverse-on-surface tracking-tight leading-[1.1]">
+            10 Years of Flavor. <br/>
+<span class="text-primary-container italic font-normal">One Signature Biryani.</span>
+</h1>
+<!-- Supporting Text -->
+<p class="font-body-lg text-body-lg text-outline-variant max-w-xl">
+            Authentic Pakistani flavors, slow-cooked in sealed handis, freshly prepared and served with the warmth and legacy you’ve trusted for over a decade.
+          </p>
+<!-- CTAs -->
+<div class="flex flex-wrap items-center gap-space-md pt-space-xs">
+<a class="px-space-xl py-space-sm bg-primary-container hover:bg-primary text-on-primary-container hover:text-on-primary transition-all uppercase tracking-wider font-label-caps text-label-caps rounded-lg shadow-md flex items-center gap-space-xs group" href="#menu">
+<span>Order Now</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+<a class="px-space-xl py-space-sm bg-transparent hover:bg-surface-variant/10 text-primary-fixed transition-colors uppercase tracking-wider font-label-caps text-label-caps rounded-lg" href="#menu">
+              View Menu
+            </a>
+</div>
+<!-- Trust Proof Quick Strip -->
+<div class="pt-space-lg flex flex-wrap items-center gap-y-space-xs gap-x-space-lg text-outline-variant font-label-md text-label-md">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-primary-fixed text-[18px]">verified</span> 100% Traditional Dum Cooking</span>
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-primary-fixed text-[18px]">verified</span> Pure Basmati &amp; Saffron</span>
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-primary-fixed text-[18px]">verified</span> Halal &amp; Fresh Daily</span>
+</div>
+</div>
+<!-- Hero Visual Showcase -->
+<div class="lg:col-span-6 relative mt-space-xl lg:mt-0">
+<div class="relative w-full rounded-2xl overflow-hidden shadow-2xl group bg-surface-variant/5">
+<img alt="Zero Biryani Signature Dum Handi Biryani" class="w-full h-auto max-h-[560px] object-cover rounded-2xl transform transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCV37YQ7z93iw_hjuIT2A987vgrbv3VGVL7Po-Sqp7pQU2mwqOjZ1HalEYpRMf8ODo4l_6e_rJG7gZ7EsIh-uihe6KmimaasBggDjaqdCFdBl0v_cnF37KnXtJiN0qcI2VMVmA_iNv5XCUyCjq8Ev3nyUHTA0regjJy4b7kY12YJT7wTH5AvR065LVZhuAp7MWqXBT7oEYlXj7WICQ8UW1OPFFrXvq1KRBHhE_7ivNcP5csiKWRHoKC-w"/>
+<!-- Saffron Vignette Overlay -->
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/80 via-transparent to-transparent pointer-events-none"></div>
+<!-- Floating Badge On Image -->
+<div class="absolute bottom-6 left-6 right-6 bg-inverse-surface/90 backdrop-blur-md p-space-md rounded-xl flex items-center justify-between shadow-lg">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">local_fire_department</span>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md text-primary-fixed">Signature Dum Biryani</h4>
+<p class="font-label-sm text-label-sm text-outline-variant">Aged Basmati • Whole Spices • Bone-in Tender Cuts</p>
+</div>
+</div>
+<span class="px-space-sm py-1 rounded bg-secondary/20 text-secondary-fixed text-label-caps font-label-caps uppercase tracking-wider hidden sm:block">Freshly Hand-Sealed</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Quick Features Strip Divider -->
+<div class="w-full mt-space-3xl bg-surface-variant/10 py-space-md">
+<div class="max-w-[1280px] mx-auto px-page-margin-mobile md:px-page-margin-tablet lg:px-page-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md text-center md:text-left">
+<div class="flex items-center justify-center md:justify-start gap-space-sm">
+<span class="material-symbols-outlined text-primary-fixed text-[24px]">soup_kitchen</span>
+<div>
+<span class="font-label-md text-label-md text-inverse-on-surface block">100% Traditional Dum Cooking</span>
+<span class="font-label-sm text-label-sm text-outline-variant">Slow-cooked in dough-sealed handis</span>
+</div>
+</div>
+<div class="flex items-center justify-center md:justify-start gap-space-sm">
+<span class="material-symbols-outlined text-primary-fixed text-[24px]">spa</span>
+<div>
+<span class="font-label-md text-label-md text-inverse-on-surface block">Pure Basmati &amp; Saffron</span>
+<span class="font-label-sm text-label-sm text-outline-variant">Extra long-grain fragrant rice batches</span>
+</div>
+</div>
+<div class="flex items-center justify-center md:justify-start gap-space-sm">
+<span class="material-symbols-outlined text-primary-fixed text-[24px]">storefront</span>
+<div>
+<span class="font-label-md text-label-md text-inverse-on-surface block">Dine-In, Takeaway &amp; Delivery</span>
+<span class="font-label-sm text-label-sm text-outline-variant">Direct hot delivery within 35 mins</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 2. SIGNATURE BIRYANI SPOTLIGHT -->
+<section class="py-space-3xl lg:py-space-4xl bg-surface-bright text-on-surface">
+<div class="max-w-[1280px] mx-auto px-page-margin-mobile md:px-page-margin-tablet lg:px-page-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-grid-gutter-desktop items-center">
+<!-- Left Visual Framing -->
+<div class="lg:col-span-6 relative">
+<div class="relative p-2 rounded-2xl bg-surface-container-high shadow-md">
+<div class="overflow-hidden rounded-xl">
+<img alt="Slow Cooked Royal Biryani in Hammered Brass Handi" class="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCV37YQ7z93iw_hjuIT2A987vgrbv3VGVL7Po-Sqp7pQU2mwqOjZ1HalEYpRMf8ODo4l_6e_rJG7gZ7EsIh-uihe6KmimaasBggDjaqdCFdBl0v_cnF37KnXtJiN0qcI2VMVmA_iNv5XCUyCjq8Ev3nyUHTA0regjJy4b7kY12YJT7wTH5AvR065LVZhuAp7MWqXBT7oEYlXj7WICQ8UW1OPFFrXvq1KRBHhE_7ivNcP5csiKWRHoKC-w"/>
+</div>
+<!-- Decorative Heritage Tag -->
+<div class="absolute -bottom-4 -right-4 bg-primary text-on-primary px-space-md py-space-sm rounded-lg shadow-lg flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-[18px]">workspace_premium</span>
+<span class="font-label-caps text-label-caps uppercase tracking-wider">Original 2014 Dum Blend</span>
+</div>
+</div>
+</div>
+<!-- Right Story Content -->
+<div class="lg:col-span-6 flex flex-col items-start gap-space-sm">
+<div class="flex items-center gap-space-2xs">
+<span class="w-8 h-[2px] bg-primary"></span>
+<span class="font-label-caps text-label-caps text-primary uppercase tracking-widest">Heritage Recipe</span>
+</div>
+<h2 class="font-headline-xl text-headline-xl text-on-surface">
+            Our Signature Biryani
+          </h2>
+<h3 class="font-headline-md text-headline-md text-secondary">
+            The Taste That Built Our Name.
+          </h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-space-2xs">
+            Slow-cooked with fragrant basmati rice, carefully selected spices and tender ingredients, our biryani has been at the heart of Zero Biryani for more than 10 years. We still seal every earthen pot with fresh dough just like we did on day one.
+          </p>
+<!-- 4 Feature Checkpoints -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm w-full my-space-md">
+<div class="flex items-start gap-space-xs p-space-sm rounded-lg bg-surface-container-low shadow-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+<span class="font-label-md text-label-md text-on-surface">Authentic Pakistani Recipe</span>
+</div>
+<div class="flex items-start gap-space-xs p-space-sm rounded-lg bg-surface-container-low shadow-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+<span class="font-label-md text-label-md text-on-surface">Freshly Prepared Daily</span>
+</div>
+<div class="flex items-start gap-space-xs p-space-sm rounded-lg bg-surface-container-low shadow-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+<span class="font-label-md text-label-md text-on-surface">Premium Spices &amp; Basmati</span>
+</div>
+<div class="flex items-start gap-space-xs p-space-sm rounded-lg bg-surface-container-low shadow-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+<span class="font-label-md text-label-md text-on-surface">Signature Zero Biryani Taste</span>
+</div>
+</div>
+<a class="px-space-xl py-space-sm bg-secondary hover:bg-on-secondary-fixed-variant text-on-secondary uppercase font-label-caps text-label-caps tracking-widest rounded-lg shadow-sm transition-all flex items-center gap-space-xs" href="#menu">
+<span>Explore Our Menu</span>
+<span class="material-symbols-outlined text-[16px]">restaurant_menu</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. COMPREHENSIVE MENU SECTION -->
+<section class="py-space-3xl lg:py-space-4xl bg-surface-container-low text-on-surface" id="menu">
+<div class="max-w-[1280px] mx-auto px-page-margin-mobile md:px-page-margin-tablet lg:px-page-margin-desktop">
+<!-- Section Header -->
+<div class="text-center max-w-2xl mx-auto mb-space-2xl">
+<span class="font-label-caps text-label-caps text-primary uppercase tracking-widest block mb-space-2xs">Our Master Crafted Selection</span>
+<h2 class="font-headline-xl text-headline-xl text-on-surface">Something Delicious for Everyone.</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-2xs">Every dish is cooked with uncompromised quality, authentic Pakistani spice mixes, and heritage culinary traditions.</p>
+<!-- Filter Tabs (Interactive Mockup with Inline JS) -->
+<div class="flex flex-wrap items-center justify-center gap-space-xs mt-space-lg" id="menu-filters">
+<button class="menu-tab-btn active px-space-md py-space-2xs rounded-full bg-primary text-on-primary font-label-md text-label-md transition-all" data-filter="all">All Dishes</button>
+<button class="menu-tab-btn px-space-md py-space-2xs rounded-full bg-surface-container-high text-on-surface hover:bg-surface-container-highest font-label-md text-label-md transition-all" data-filter="biryani">Signature Biryani</button>
+<button class="menu-tab-btn px-space-md py-space-2xs rounded-full bg-surface-container-high text-on-surface hover:bg-surface-container-highest font-label-md text-label-md transition-all" data-filter="karahi">Karahi &amp; Handi</button>
+<button class="menu-tab-btn px-space-md py-space-2xs rounded-full bg-surface-container-high text-on-surface hover:bg-surface-container-highest font-label-md text-label-md transition-all" data-filter="bbq">Charcoal BBQ</button>
+<button class="menu-tab-btn px-space-md py-space-2xs rounded-full bg-surface-container-high text-on-surface hover:bg-surface-container-highest font-label-md text-label-md transition-all" data-filter="sides">Breads &amp; Sides</button>
+</div>
+</div>
+<!-- Dish Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-lg" id="dishes-grid">
+<!-- Dish 1 -->
+<div class="dish-item biryani bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all flex flex-col">
+<div class="relative h-56 overflow-hidden">
+<img alt="Signature Chicken Biryani" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCV37YQ7z93iw_hjuIT2A987vgrbv3VGVL7Po-Sqp7pQU2mwqOjZ1HalEYpRMf8ODo4l_6e_rJG7gZ7EsIh-uihe6KmimaasBggDjaqdCFdBl0v_cnF37KnXtJiN0qcI2VMVmA_iNv5XCUyCjq8Ev3nyUHTA0regjJy4b7kY12YJT7wTH5AvR065LVZhuAp7MWqXBT7oEYlXj7WICQ8UW1OPFFrXvq1KRBHhE_7ivNcP5csiKWRHoKC-w"/>
+<span class="absolute top-3 left-3 bg-secondary text-on-secondary px-space-xs py-1 rounded font-label-caps text-label-caps uppercase tracking-wider shadow">Popular</span>
+<span class="absolute bottom-3 right-3 bg-inverse-surface/85 backdrop-blur text-primary-fixed px-space-sm py-1 rounded font-headline-md text-headline-md">$15.99</span>
+</div>
+<div class="p-space-md flex-1 flex flex-col justify-between">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Signature Chicken Biryani</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-2xs">Fragrant aged basmati rice layered with spiced marinated chicken, saffron, and golden fried onions.</p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">local_dining</span> Matka Dum Portioned</span>
+<button class="px-space-md py-space-2xs bg-primary-container text-on-primary-container hover:bg-primary hover:text-on-primary font-label-md text-label-md rounded transition-colors flex items-center gap-1">
+<span>Add</span>
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Dish 2 -->
+<div class="dish-item biryani bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all flex flex-col">
+<div class="relative h-56 overflow-hidden">
+<img alt="Mutton Biryani" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCV37YQ7z93iw_hjuIT2A987vgrbv3VGVL7Po-Sqp7pQU2mwqOjZ1HalEYpRMf8ODo4l_6e_rJG7gZ7EsIh-uihe6KmimaasBggDjaqdCFdBl0v_cnF37KnXtJiN0qcI2VMVmA_iNv5XCUyCjq8Ev3nyUHTA0regjJy4b7kY12YJT7wTH5AvR065LVZhuAp7MWqXBT7oEYlXj7WICQ8UW1OPFFrXvq1KRBHhE_7ivNcP5csiKWRHoKC-w"/>
+<span class="absolute top-3 left-3 bg-primary text-on-primary px-space-xs py-1 rounded font-label-caps text-label-caps uppercase tracking-wider shadow">Signature</span>
+<span class="absolute bottom-3 right-3 bg-inverse-surface/85 backdrop-blur text-primary-fixed px-space-sm py-1 rounded font-headline-md text-headline-md">$18.99</span>
+</div>
+<div class="p-space-md flex-1 flex flex-col justify-between">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Mutton Biryani</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-2xs">Rich, tender slow-cooked bone-in mutton with aromatic saffron rice and whole fragrant garam masala.</p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">timer</span> 4-Hour Dum Pukht</span>
+<button class="px-space-md py-space-2xs bg-primary-container text-on-primary-container hover:bg-primary hover:text-on-primary font-label-md text-label-md rounded transition-colors flex items-center gap-1">
+<span>Add</span>
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Dish 3 -->
+<div class="dish-item biryani bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all flex flex-col">
+<div class="relative h-56 overflow-hidden">
+<img alt="Karachi Beef Biryani" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCV37YQ7z93iw_hjuIT2A987vgrbv3VGVL7Po-Sqp7pQU2mwqOjZ1HalEYpRMf8ODo4l_6e_rJG7gZ7EsIh-uihe6KmimaasBggDjaqdCFdBl0v_cnF37KnXtJiN0qcI2VMVmA_iNv5XCUyCjq8Ev3nyUHTA0regjJy4b7kY12YJT7wTH5AvR065LVZhuAp7MWqXBT7oEYlXj7WICQ8UW1OPFFrXvq1KRBHhE_7ivNcP5csiKWRHoKC-w"/>
+<span class="absolute bottom-3 right-3 bg-inverse-surface/85 backdrop-blur text-primary-fixed px-space-sm py-1 rounded font-headline-md text-headline-md">$16.99</span>
+</div>
+<div class="p-space-md flex-1 flex flex-col justify-between">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Karachi Beef Biryani</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-2xs">Deep, savory spiced beef layered in traditional Karachi-style dum pot with seasoned aloo and dried plum hints.</p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">local_fire_department</span> Karachi Spicy</span>
+<button class="px-space-md py-space-2xs bg-primary-container text-on-primary-container hover:bg-primary hover:text-on-primary font-label-md text-label-md rounded transition-colors flex items-center gap-1">
+<span>Add</span>
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Dish 4 -->
+<div class="dish-item karahi bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all flex flex-col">
+<div class="relative h-56 overflow-hidden">
+<img alt="Chicken Karahi" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0AaWqstT6ZZoEwUJ9ThPxxELtdzQIWwy6wvv7wGnyRrqkjqSF3NALZGiyvT1xtY3p9h7vq3cU6jWlB51k3ivhWKFUZRi40UksUKT5VDEgOTMXZ8IYdyFw8szB8lM-0jJAtPy49q9ezyH7YOFf_2JRQGml__O4IRxz6NT-MQYSV-HaQLN4WNWV-jYu-EBI0FqD4jNKGHAQA0efnNCA2akZ8Y5BVmqbAEF4_KLOEogn4E5aXO6C6qkDDg"/>
+<span class="absolute top-3 left-3 bg-secondary text-on-secondary px-space-xs py-1 rounded font-label-caps text-label-caps uppercase tracking-wider shadow">Chef Special</span>
+<span class="absolute bottom-3 right-3 bg-inverse-surface/85 backdrop-blur text-primary-fixed px-space-sm py-1 rounded font-headline-md text-headline-md">$21.50</span>
+</div>
+<div class="p-space-md flex-1 flex flex-col justify-between">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Chicken Karahi</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-2xs">Wok-cooked chicken in freshly pounded tomatoes, ginger juliennes, green chilies, and freshly cracked black pepper.</p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">skillet</span> Cast Iron Wok</span>
+<button class="px-space-md py-space-2xs bg-primary-container text-on-primary-container hover:bg-primary hover:text-on-primary font-label-md text-label-md rounded transition-colors flex items-center gap-1">
+<span>Add</span>
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Dish 5 -->
+<div class="dish-item karahi bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all flex flex-col">
+<div class="relative h-56 overflow-hidden">
+<img alt="Mutton Karahi" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0AaWqstT6ZZoEwUJ9ThPxxELtdzQIWwy6wvv7wGnyRrqkjqSF3NALZGiyvT1xtY3p9h7vq3cU6jWlB51k3ivhWKFUZRi40UksUKT5VDEgOTMXZ8IYdyFw8szB8lM-0jJAtPy49q9ezyH7YOFf_2JRQGml__O4IRxz6NT-MQYSV-HaQLN4WNWV-jYu-EBI0FqD4jNKGHAQA0efnNCA2akZ8Y5BVmqbAEF4_KLOEogn4E5aXO6C6qkDDg"/>
+<span class="absolute bottom-3 right-3 bg-inverse-surface/85 backdrop-blur text-primary-fixed px-space-sm py-1 rounded font-headline-md text-headline-md">$26.00</span>
+</div>
+<div class="p-space-md flex-1 flex flex-col justify-between">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Mutton Karahi</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-2xs">Succulent baby mutton simmered in cast iron karahi with crushed garlic, whole coriander, and traditional Lahori spices.</p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">restaurant</span> Desi Ghee Finish</span>
+<button class="px-space-md py-space-2xs bg-primary-container text-on-primary-container hover:bg-primary hover:text-on-primary font-label-md text-label-md rounded transition-colors flex items-center gap-1">
+<span>Add</span>
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Dish 6 -->
+<div class="dish-item bbq bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all flex flex-col">
+<div class="relative h-56 overflow-hidden">
+<img alt="Chicken Tikka" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdbDcqVSvTlAPGVIxhhH_QqcGwrCwg-7Y7HF86L3WE27tGUghmBAWs9mLGJ-Z2gMfP8KnRp9RtJXZQyfLZCJ86DClChy4kXoRttseUMQeOy7zOTyj7krgaZadNaCZ93Qk3eeqKQyZ4fG-4Td4F4ItsWIkuVpmLTwBHrZ2Rf73S9cUM4Dg1zQbtbGT0prXEXw6qBTebMIkhaUmu0dzwcfTtKdV0WDw3MuCxzMnv2EIJO-JphTTVwz9Lfw"/>
+<span class="absolute bottom-3 right-3 bg-inverse-surface/85 backdrop-blur text-primary-fixed px-space-sm py-1 rounded font-headline-md text-headline-md">$12.50</span>
+</div>
+<div class="p-space-md flex-1 flex flex-col justify-between">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Charcoal Chicken Tikka</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-2xs">Smoky, char-grilled chicken quarters marinated in Kashmiri red chili, cultured yogurt, and roasted ground spices.</p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">outdoor_grill</span> Open Charcoal Pit</span>
+<button class="px-space-md py-space-2xs bg-primary-container text-on-primary-container hover:bg-primary hover:text-on-primary font-label-md text-label-md rounded transition-colors flex items-center gap-1">
+<span>Add</span>
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Dish 7 -->
+<div class="dish-item bbq bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all flex flex-col">
+<div class="relative h-56 overflow-hidden">
+<img alt="Seekh Kabab" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdbDcqVSvTlAPGVIxhhH_QqcGwrCwg-7Y7HF86L3WE27tGUghmBAWs9mLGJ-Z2gMfP8KnRp9RtJXZQyfLZCJ86DClChy4kXoRttseUMQeOy7zOTyj7krgaZadNaCZ93Qk3eeqKQyZ4fG-4Td4F4ItsWIkuVpmLTwBHrZ2Rf73S9cUM4Dg1zQbtbGT0prXEXw6qBTebMIkhaUmu0dzwcfTtKdV0WDw3MuCxzMnv2EIJO-JphTTVwz9Lfw"/>
+<span class="absolute top-3 left-3 bg-secondary text-on-secondary px-space-xs py-1 rounded font-label-caps text-label-caps uppercase tracking-wider shadow">Popular</span>
+<span class="absolute bottom-3 right-3 bg-inverse-surface/85 backdrop-blur text-primary-fixed px-space-sm py-1 rounded font-headline-md text-headline-md">$13.99</span>
+</div>
+<div class="p-space-md flex-1 flex flex-col justify-between">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Seekh Kabab</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-2xs">Melt-in-mouth minced beef and lamb skewers with fresh mint, coriander, ginger, and slow-roasted cumin.</p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">game_playable</span> 4 Skewers</span>
+<button class="px-space-md py-space-2xs bg-primary-container text-on-primary-container hover:bg-primary hover:text-on-primary font-label-md text-label-md rounded transition-colors flex items-center gap-1">
+<span>Add</span>
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Dish 8 -->
+<div class="dish-item karahi bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all flex flex-col">
+<div class="relative h-56 overflow-hidden">
+<img alt="Chicken Handi" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0AaWqstT6ZZoEwUJ9ThPxxELtdzQIWwy6wvv7wGnyRrqkjqSF3NALZGiyvT1xtY3p9h7vq3cU6jWlB51k3ivhWKFUZRi40UksUKT5VDEgOTMXZ8IYdyFw8szB8lM-0jJAtPy49q9ezyH7YOFf_2JRQGml__O4IRxz6NT-MQYSV-HaQLN4WNWV-jYu-EBI0FqD4jNKGHAQA0efnNCA2akZ8Y5BVmqbAEF4_KLOEogn4E5aXO6C6qkDDg"/>
+<span class="absolute bottom-3 right-3 bg-inverse-surface/85 backdrop-blur text-primary-fixed px-space-sm py-1 rounded font-headline-md text-headline-md">$19.99</span>
+</div>
+<div class="p-space-md flex-1 flex flex-col justify-between">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Royal Chicken Handi</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-2xs">Silky boneless chicken simmered in rich cashew and cream gravy in a traditional earthen clay pot.</p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">full_hd</span> Clay Pot Slow Cooked</span>
+<button class="px-space-md py-space-2xs bg-primary-container text-on-primary-container hover:bg-primary hover:text-on-primary font-label-md text-label-md rounded transition-colors flex items-center gap-1">
+<span>Add</span>
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Dish 9 -->
+<div class="dish-item bbq bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all flex flex-col">
+<div class="relative h-56 overflow-hidden">
+<img alt="Mixed BBQ Platter" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdbDcqVSvTlAPGVIxhhH_QqcGwrCwg-7Y7HF86L3WE27tGUghmBAWs9mLGJ-Z2gMfP8KnRp9RtJXZQyfLZCJ86DClChy4kXoRttseUMQeOy7zOTyj7krgaZadNaCZ93Qk3eeqKQyZ4fG-4Td4F4ItsWIkuVpmLTwBHrZ2Rf73S9cUM4Dg1zQbtbGT0prXEXw6qBTebMIkhaUmu0dzwcfTtKdV0WDw3MuCxzMnv2EIJO-JphTTVwz9Lfw"/>
+<span class="absolute top-3 left-3 bg-primary text-on-primary px-space-xs py-1 rounded font-label-caps text-label-caps uppercase tracking-wider shadow">Feast</span>
+<span class="absolute bottom-3 right-3 bg-inverse-surface/85 backdrop-blur text-primary-fixed px-space-sm py-1 rounded font-headline-md text-headline-md">$34.50</span>
+</div>
+<div class="p-space-md flex-1 flex flex-col justify-between">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Mixed BBQ Platter</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-2xs">Generous assortment of Seekh Kababs, Chicken Tikka boti, Malai boti, served with mint chutney and warm naan.</p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">groups</span> Serves 3–4</span>
+<button class="px-space-md py-space-2xs bg-primary-container text-on-primary-container hover:bg-primary hover:text-on-primary font-label-md text-label-md rounded transition-colors flex items-center gap-1">
+<span>Add</span>
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Dish 10 -->
+<div class="dish-item sides bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all flex flex-col">
+<div class="relative h-56 overflow-hidden">
+<img alt="Garlic and Fresh Tandoori Naan" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcLB8FCfh3x3HVUVJG_za4hSOpWnFbjM7rvlj3Yn8fbO7xV7CIw5Ij6CMk0veeFgjhYDmxhGUDzdJwR4pZG2nCLSJmx06GdqyREA1J9-ARA_1WNGGaRr84kT7vxPGbl3K80ei_OcRQvVic559QLMjbjcIvVedWcsrjSNehDOduhIJHI86K6jhJb6IgFxpVOfYbV7b3sry-6UxBLDk8sSo36ZLgAIvoxJkvSoYk6L9CASk9coqxaWlXsw"/>
+<span class="absolute bottom-3 right-3 bg-inverse-surface/85 backdrop-blur text-primary-fixed px-space-sm py-1 rounded font-headline-md text-headline-md">$3.99</span>
+</div>
+<div class="p-space-md flex-1 flex flex-col justify-between">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Garlic &amp; Fresh Naan</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-2xs">Clay oven baked flatbreads brushed with clarified desi ghee, minced fresh garlic, and garden cilantro.</p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">bakery_dining</span> Clay Oven Fresh</span>
+<button class="px-space-md py-space-2xs bg-primary-container text-on-primary-container hover:bg-primary hover:text-on-primary font-label-md text-label-md rounded transition-colors flex items-center gap-1">
+<span>Add</span>
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Dish 11 -->
+<div class="dish-item sides bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all flex flex-col">
+<div class="relative h-56 overflow-hidden">
+<img alt="Fresh Raita and Kachumber Salad" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcLB8FCfh3x3HVUVJG_za4hSOpWnFbjM7rvlj3Yn8fbO7xV7CIw5Ij6CMk0veeFgjhYDmxhGUDzdJwR4pZG2nCLSJmx06GdqyREA1J9-ARA_1WNGGaRr84kT7vxPGbl3K80ei_OcRQvVic559QLMjbjcIvVedWcsrjSNehDOduhIJHI86K6jhJb6IgFxpVOfYbV7b3sry-6UxBLDk8sSo36ZLgAIvoxJkvSoYk6L9CASk9coqxaWlXsw"/>
+<span class="absolute bottom-3 right-3 bg-inverse-surface/85 backdrop-blur text-primary-fixed px-space-sm py-1 rounded font-headline-md text-headline-md">$4.50</span>
+</div>
+<div class="p-space-md flex-1 flex flex-col justify-between">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Fresh Raita &amp; Kachumber Salad</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-2xs">Cooling roasted cumin and mint whipped yogurt accompanied by diced crisp cucumbers, red onions, and lemon.</p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">eco</span> Vegetarian Refresh</span>
+<button class="px-space-md py-space-2xs bg-primary-container text-on-primary-container hover:bg-primary hover:text-on-primary font-label-md text-label-md rounded transition-colors flex items-center gap-1">
+<span>Add</span>
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. THREE WAYS TO ENJOY (ORDERING EXPERIENCE) -->
+<section class="py-space-3xl lg:py-space-4xl bg-surface-bright text-on-surface">
+<div class="max-w-[1280px] mx-auto px-page-margin-mobile md:px-page-margin-tablet lg:px-page-margin-desktop">
+<div class="text-center max-w-2xl mx-auto mb-space-2xl">
+<span class="font-label-caps text-label-caps text-primary uppercase tracking-widest block mb-space-2xs">Convenient &amp; Seamless</span>
+<h2 class="font-headline-xl text-headline-xl text-on-surface">Your Favorite Food, Your Way.</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-2xs">Whether gathering around our tables or unwrapping at home, experience the exact same steaming perfection.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg">
+<!-- Dine In -->
+<div class="bg-surface-container-low p-space-xl rounded-2xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div>
+<div class="w-14 h-14 rounded-xl bg-primary-fixed text-on-primary-fixed flex items-center justify-center mb-space-md">
+<span class="material-symbols-outlined text-[28px]">table_restaurant</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-space-xs">Dine In</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Enjoy the full Zero Biryani experience with family and friends in our warm dining room, served straight in hammered brass handis.
+            </p>
+</div>
+<a class="mt-space-lg px-space-md py-space-xs bg-surface-container-highest hover:bg-primary hover:text-on-primary text-on-surface font-label-caps text-label-caps uppercase tracking-wider rounded-lg transition-colors flex items-center justify-center gap-space-2xs" href="#reservation">
+<span>Dine With Us</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</a>
+</div>
+<!-- Takeaway -->
+<div class="bg-surface-container-low p-space-xl rounded-2xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div>
+<div class="w-14 h-14 rounded-xl bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center mb-space-md">
+<span class="material-symbols-outlined text-[28px]">shopping_bag</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-space-xs">Takeaway</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Freshly packed in our signature thermal gold boxes, steam-locked and piping hot, ready right when you pull up to the restaurant.
+            </p>
+</div>
+<a class="mt-space-lg px-space-md py-space-xs bg-surface-container-highest hover:bg-secondary hover:text-on-secondary text-on-surface font-label-caps text-label-caps uppercase tracking-wider rounded-lg transition-colors flex items-center justify-center gap-space-2xs" href="#menu">
+<span>Order for Pickup</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</a>
+</div>
+<!-- Delivery -->
+<div class="bg-surface-container-low p-space-xl rounded-2xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div>
+<div class="w-14 h-14 rounded-xl bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center mb-space-md">
+<span class="material-symbols-outlined text-[28px]">moped</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-space-xs">Direct Delivery</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Craving authentic biryani at home? We deliver piping hot flavor and fragrant steam straight to your doorstep in 35 minutes or less.
+            </p>
+</div>
+<a class="mt-space-lg px-space-md py-space-xs bg-primary-container hover:bg-primary text-on-primary-container hover:text-on-primary font-label-caps text-label-caps uppercase tracking-wider rounded-lg transition-colors flex items-center justify-center gap-space-2xs" href="#menu">
+<span>Order Delivery</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. WHY ZERO BIRYANI (TRUST & QUALITY) -->
+<section class="py-space-3xl bg-surface-container text-on-surface">
+<div class="max-w-[1280px] mx-auto px-page-margin-mobile md:px-page-margin-tablet lg:px-page-margin-desktop">
+<div class="text-center max-w-2xl mx-auto mb-space-2xl">
+<span class="font-label-caps text-label-caps text-primary uppercase tracking-widest block mb-space-2xs">Decade of Excellence</span>
+<h2 class="font-headline-xl text-headline-xl text-on-surface">Why Zero Biryani?</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-2xs">Our unwavering adherence to slow authentic methods means uncompromising taste in every single spoonful.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-md transition-shadow">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center text-primary mb-space-sm">
+<span class="material-symbols-outlined text-[24px]">history_edu</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-surface mb-space-2xs">10+ Years Heritage</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">A full decade of serving Pakistani flavors with steady culinary dedication and beloved local tradition.</p>
+</div>
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-md transition-shadow">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center text-primary mb-space-sm">
+<span class="material-symbols-outlined text-[24px]">nutrition</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-surface mb-space-2xs">Fresh Ingredients</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Strictly fresh Halal meats, 2-year aged long-grain basmati, and whole spices pounded every morning.</p>
+</div>
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-md transition-shadow">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center text-primary mb-space-sm">
+<span class="material-symbols-outlined text-[24px]">auto_awesome</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-surface mb-space-2xs">Authentic Taste</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Time-honored recipes passed through generations, perfected with our signature aromatic balance.</p>
+</div>
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-md transition-shadow">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center text-primary mb-space-sm">
+<span class="material-symbols-outlined text-[24px]">celebration</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-surface mb-space-2xs">For Every Occasion</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">From casual weeknight feasts to grand weddings and festive banquets, we cater to all your celebrations.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. 10-YEAR LEGACY TIMELINE -->
+<section class="py-space-3xl lg:py-space-4xl bg-inverse-surface text-inverse-on-surface relative overflow-hidden">
+<div class="max-w-[1280px] mx-auto px-page-margin-mobile md:px-page-margin-tablet lg:px-page-margin-desktop relative z-10">
+<div class="text-center max-w-3xl mx-auto mb-space-2xl">
+<span class="font-label-caps text-label-caps text-primary-fixed uppercase tracking-widest block mb-space-2xs">Our 10-Year Journey</span>
+<h2 class="font-headline-xl text-headline-xl text-inverse-on-surface">10 Years. Thousands of Meals. One Passion.</h2>
+<p class="font-body-lg text-body-lg text-outline-variant mt-space-2xs">From our first plate to the meals we serve today, Zero Biryani has grown through one simple promise: serve food worth coming back for.</p>
+</div>
+<!-- Horizontal / Responsive Timeline -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-lg relative">
+<!-- 2014 -->
+<div class="p-space-lg rounded-xl bg-surface-variant/5 shadow-md flex flex-col justify-between relative group hover:bg-surface-variant/10 transition-colors">
+<div>
+<span class="font-display-hero text-headline-xl text-primary-fixed block mb-space-2xs">2014</span>
+<h4 class="font-headline-md text-headline-md text-inverse-on-surface mb-space-xs">The Beginning</h4>
+<p class="font-body-md text-body-md text-outline-variant">The birth of our signature recipe in a small traditional kitchen with just 3 dum handis and a commitment to genuine spices.</p>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center gap-space-2xs text-tertiary-fixed font-label-caps text-label-caps uppercase">
+<span class="w-2 h-2 rounded-full bg-primary-fixed"></span>
+<span>Handmade First Batch</span>
+</div>
+</div>
+<!-- 2018 -->
+<div class="p-space-lg rounded-xl bg-surface-variant/5 shadow-md flex flex-col justify-between relative group hover:bg-surface-variant/10 transition-colors">
+<div>
+<span class="font-display-hero text-headline-xl text-primary-fixed block mb-space-2xs">2018</span>
+<h4 class="font-headline-md text-headline-md text-inverse-on-surface mb-space-xs">Perfecting Our Recipes</h4>
+<p class="font-body-md text-body-md text-outline-variant">Expanding our menu into cast-iron wok karahis and live charcoal BBQ, attracting patrons from across the district.</p>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center gap-space-2xs text-tertiary-fixed font-label-caps text-label-caps uppercase">
+<span class="w-2 h-2 rounded-full bg-primary-fixed"></span>
+<span>Live Grill Expansion</span>
+</div>
+</div>
+<!-- 2021 -->
+<div class="p-space-lg rounded-xl bg-surface-variant/5 shadow-md flex flex-col justify-between relative group hover:bg-surface-variant/10 transition-colors">
+<div>
+<span class="font-display-hero text-headline-xl text-primary-fixed block mb-space-2xs">2021</span>
+<h4 class="font-headline-md text-headline-md text-inverse-on-surface mb-space-xs">A Growing Family</h4>
+<p class="font-body-md text-body-md text-outline-variant">Welcoming tens of thousands of families who made our dining room the hub for Sunday lunches and Eid celebrations.</p>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center gap-space-2xs text-tertiary-fixed font-label-caps text-label-caps uppercase">
+<span class="w-2 h-2 rounded-full bg-primary-fixed"></span>
+<span>Banquet Catering</span>
+</div>
+</div>
+<!-- Today -->
+<div class="p-space-lg rounded-xl bg-primary/20 shadow-md flex flex-col justify-between relative group hover:bg-primary/30 transition-colors">
+<div>
+<span class="font-display-hero text-headline-xl text-primary-container block mb-space-2xs">Today</span>
+<h4 class="font-headline-md text-headline-md text-inverse-on-surface mb-space-xs">Zero Biryani</h4>
+<p class="font-body-md text-body-md text-outline-variant">Proudly serving over a decade of authentic flavor, unmatched quality, and heartfelt Pakistani culinary hospitality.</p>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center gap-space-2xs text-primary-fixed font-label-caps text-label-caps uppercase">
+<span class="w-2 h-2 rounded-full bg-secondary-container animate-pulse"></span>
+<span>10+ Years &amp; Counting</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 7. FOOD & RESTAURANT GALLERY -->
+<section class="py-space-3xl lg:py-space-4xl bg-surface text-on-surface">
+<div class="max-w-[1280px] mx-auto px-page-margin-mobile md:px-page-margin-tablet lg:px-page-margin-desktop">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-space-2xl">
+<div>
+<span class="font-label-caps text-label-caps text-primary uppercase tracking-widest block mb-space-2xs">Visual Indulgence</span>
+<h2 class="font-headline-xl text-headline-xl text-on-surface">A Feast for the Senses</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md mt-space-xs md:mt-0">
+          From the sizzling sound of fresh Seekh Kababs on charcoal to the rich aroma of saffron steam as the dough seal breaks open.
+        </p>
+</div>
+<!-- Bento Grid Gallery -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-md">
+<div class="md:col-span-7 h-80 rounded-2xl overflow-hidden shadow-sm group">
+<img alt="Zero Biryani Signature Pot Closeup" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCV37YQ7z93iw_hjuIT2A987vgrbv3VGVL7Po-Sqp7pQU2mwqOjZ1HalEYpRMf8ODo4l_6e_rJG7gZ7EsIh-uihe6KmimaasBggDjaqdCFdBl0v_cnF37KnXtJiN0qcI2VMVmA_iNv5XCUyCjq8Ev3nyUHTA0regjJy4b7kY12YJT7wTH5AvR065LVZhuAp7MWqXBT7oEYlXj7WICQ8UW1OPFFrXvq1KRBHhE_7ivNcP5csiKWRHoKC-w"/>
+</div>
+<div class="md:col-span-5 h-80 rounded-2xl overflow-hidden shadow-sm group">
+<img alt="Charcoal Grilled BBQ Skewers Sizzler" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdbDcqVSvTlAPGVIxhhH_QqcGwrCwg-7Y7HF86L3WE27tGUghmBAWs9mLGJ-Z2gMfP8KnRp9RtJXZQyfLZCJ86DClChy4kXoRttseUMQeOy7zOTyj7krgaZadNaCZ93Qk3eeqKQyZ4fG-4Td4F4ItsWIkuVpmLTwBHrZ2Rf73S9cUM4Dg1zQbtbGT0prXEXw6qBTebMIkhaUmu0dzwcfTtKdV0WDw3MuCxzMnv2EIJO-JphTTVwz9Lfw"/>
+</div>
+<div class="md:col-span-4 h-72 rounded-2xl overflow-hidden shadow-sm group">
+<img alt="Simmering Tomato Chicken Karahi in Wok" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0AaWqstT6ZZoEwUJ9ThPxxELtdzQIWwy6wvv7wGnyRrqkjqSF3NALZGiyvT1xtY3p9h7vq3cU6jWlB51k3ivhWKFUZRi40UksUKT5VDEgOTMXZ8IYdyFw8szB8lM-0jJAtPy49q9ezyH7YOFf_2JRQGml__O4IRxz6NT-MQYSV-HaQLN4WNWV-jYu-EBI0FqD4jNKGHAQA0efnNCA2akZ8Y5BVmqbAEF4_KLOEogn4E5aXO6C6qkDDg"/>
+</div>
+<div class="md:col-span-4 h-72 rounded-2xl overflow-hidden shadow-sm group">
+<img alt="Warm Fine Dining Hospitality Interior" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7hgNud7d_GfGfOtOqqf0zF8KZ4CjaREGunA1xCg8hZNl6CqWHZMB-7VUEpoQOwEMaT6APZ6VnKTjN0YoZ0lG1Y4A7dYw09vXzY1GmSLZZ0YDrU45g82jJuI7ALBN6Qoxh_D46jrVyMj5_6v5kbj2rxx7qWQDfpCQDwfj7VD6W9IccUqDATGhyNP11ggEO81aUtkt3M7gsWdFLshhYeJ7lxVqiCybLbg3P92MVsvInxBjUC3rA8mfjpg"/>
+</div>
+<div class="md:col-span-4 h-72 rounded-2xl overflow-hidden shadow-sm group">
+<img alt="Luxury Packaging Takeaway Set with Naan" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcLB8FCfh3x3HVUVJG_za4hSOpWnFbjM7rvlj3Yn8fbO7xV7CIw5Ij6CMk0veeFgjhYDmxhGUDzdJwR4pZG2nCLSJmx06GdqyREA1J9-ARA_1WNGGaRr84kT7vxPGbl3K80ei_OcRQvVic559QLMjbjcIvVedWcsrjSNehDOduhIJHI86K6jhJb6IgFxpVOfYbV7b3sry-6UxBLDk8sSo36ZLgAIvoxJkvSoYk6L9CASk9coqxaWlXsw"/>
+</div>
+</div>
+</div>
+</section>
+<!-- 8. RESTAURANT DINE-IN EXPERIENCE & RESERVATION -->
+<section class="py-space-3xl lg:py-space-4xl bg-surface-container text-on-surface" id="reservation">
+<div class="max-w-[1280px] mx-auto px-page-margin-mobile md:px-page-margin-tablet lg:px-page-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-grid-gutter-desktop items-center">
+<!-- Experience Text & Booking Form -->
+<div class="lg:col-span-6 flex flex-col gap-space-md">
+<div>
+<span class="font-label-caps text-label-caps text-primary uppercase tracking-widest block mb-space-2xs">Hospitality &amp; Ambience</span>
+<h2 class="font-headline-xl text-headline-xl text-on-surface leading-tight">
+              More Than a Meal. <br/>
+<span class="italic text-primary">It’s an Experience.</span>
+</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-space-sm">
+              Bring your family, meet your friends, or simply come hungry. There’s always a warm seat, glowing lanterns, and hearty hospitality waiting at Zero Biryani.
+            </p>
+</div>
+<!-- Feature Bullets -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm my-space-xs">
+<div class="bg-surface-container-lowest p-space-sm rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-primary text-[20px] mb-1">family_restroom</span>
+<h5 class="font-label-md text-label-md text-on-surface">Family Seating</h5>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Comfortable spacious booths</p>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-primary text-[20px] mb-1">door_front</span>
+<h5 class="font-label-md text-label-md text-on-surface">Private Corners</h5>
+<p class="font-label-sm text-label-sm text-on-surface-variant">For intimate feasts</p>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-primary text-[20px] mb-1">sentiment_satisfied</span>
+<h5 class="font-label-md text-label-md text-on-surface">Warm Welcome</h5>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Attentive staff service</p>
+</div>
+</div>
+<!-- Quick Reservation Form -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-md">
+<h4 class="font-headline-md text-headline-md text-on-surface mb-space-sm">Reserve A Table</h4>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+<div>
+<label class="font-label-md text-label-md text-on-surface-variant block mb-1">Your Name</label>
+<input class="w-full bg-surface-container-low px-space-sm py-2 rounded text-body-md text-on-surface focus:outline-none focus:bg-surface-container-highest" placeholder="e.g. Tariq Khan" type="text"/>
+</div>
+<div>
+<label class="font-label-md text-label-md text-on-surface-variant block mb-1">Guests</label>
+<select class="w-full bg-surface-container-low px-space-sm py-2 rounded text-body-md text-on-surface focus:outline-none focus:bg-surface-container-highest">
+<option>2 Persons</option>
+<option>4 Persons</option>
+<option>6 - 8 Persons (Family)</option>
+<option>10+ Persons (Banquet)</option>
+</select>
+</div>
+<div>
+<label class="font-label-md text-label-md text-on-surface-variant block mb-1">Date</label>
+<input class="w-full bg-surface-container-low px-space-sm py-2 rounded text-body-md text-on-surface focus:outline-none focus:bg-surface-container-highest" type="date" value="2025-05-18"/>
+</div>
+<div>
+<label class="font-label-md text-label-md text-on-surface-variant block mb-1">Time Slot</label>
+<select class="w-full bg-surface-container-low px-space-sm py-2 rounded text-body-md text-on-surface focus:outline-none focus:bg-surface-container-highest">
+<option>1:00 PM (Lunch)</option>
+<option>2:30 PM (Lunch)</option>
+<option>7:30 PM (Dinner)</option>
+<option>9:00 PM (Dinner)</option>
+</select>
+</div>
+</div>
+<button class="w-full mt-space-md py-space-sm bg-primary hover:bg-primary-container text-on-primary hover:text-on-primary-container uppercase font-label-caps text-label-caps tracking-widest rounded transition-colors shadow">
+              Confirm Table Reservation
+            </button>
+</div>
+</div>
+<!-- Dine-In Interior Photo -->
+<div class="lg:col-span-6 relative mt-space-lg lg:mt-0">
+<div class="relative rounded-2xl overflow-hidden shadow-2xl">
+<img alt="Warm Atmospheric Fine Dining Interior at Zero Biryani" class="w-full h-[540px] object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7hgNud7d_GfGfOtOqqf0zF8KZ4CjaREGunA1xCg8hZNl6CqWHZMB-7VUEpoQOwEMaT6APZ6VnKTjN0YoZ0lG1Y4A7dYw09vXzY1GmSLZZ0YDrU45g82jJuI7ALBN6Qoxh_D46jrVyMj5_6v5kbj2rxx7qWQDfpCQDwfj7VD6W9IccUqDATGhyNP11ggEO81aUtkt3M7gsWdFLshhYeJ7lxVqiCybLbg3P92MVsvInxBjUC3rA8mfjpg"/>
+<div class="absolute bottom-6 left-6 bg-inverse-surface/80 backdrop-blur px-space-md py-space-xs rounded-lg text-inverse-on-surface">
+<span class="font-label-caps text-label-caps uppercase tracking-wider text-primary-fixed">Dining Hall • Karachi</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 9. CUSTOMER REVIEWS (AUTHENTIC TESTIMONIALS) -->
+<section class="py-space-3xl lg:py-space-4xl bg-surface-bright text-on-surface">
+<div class="max-w-[1280px] mx-auto px-page-margin-mobile md:px-page-margin-tablet lg:px-page-margin-desktop">
+<!-- Testimonials Header & Google Badge -->
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-space-2xl">
+<div>
+<span class="font-label-caps text-label-caps text-primary uppercase tracking-widest block mb-space-2xs">Real Voices</span>
+<h2 class="font-headline-xl text-headline-xl text-on-surface">Loved by Biryani Lovers.</h2>
+</div>
+<!-- Google Reviews Badge -->
+<div class="mt-space-sm md:mt-0 flex items-center gap-space-sm bg-surface-container-high px-space-md py-space-xs rounded-xl shadow-sm">
+<span class="material-symbols-outlined text-primary text-[28px]">reviews</span>
+<div>
+<div class="flex items-center text-primary">
+<span class="material-symbols-outlined text-[16px]">star</span>
+<span class="material-symbols-outlined text-[16px]">star</span>
+<span class="material-symbols-outlined text-[16px]">star</span>
+<span class="material-symbols-outlined text-[16px]">star</span>
+<span class="material-symbols-outlined text-[16px]">star</span>
+</div>
+<span class="font-label-caps text-label-caps text-on-surface uppercase">4.9 Rating • 2,800+ Verified Diners</span>
+</div>
+</div>
+</div>
+<!-- 3 Testimonial Cards -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg">
+<div class="bg-surface-container-low p-space-xl rounded-2xl shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div>
+<div class="flex items-center text-primary mb-space-sm">
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface italic">
+              "Hands down the most authentic Biryani in town. The rice grains are perfectly separated and the meat is tender enough to fall off the bone. Been coming here since 2016!"
+            </p>
+</div>
+<div class="mt-space-lg pt-space-sm flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-primary-fixed text-on-primary-fixed font-label-md flex items-center justify-center font-bold">TM</div>
+<div>
+<h5 class="font-label-md text-label-md text-on-surface">Tariq M.</h5>
+<span class="font-label-sm text-label-sm text-outline">Regular Patron • 8 Yrs</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-xl rounded-2xl shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div>
+<div class="flex items-center text-primary mb-space-sm">
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface italic">
+              "Their Chicken Karahi and Garlic Naan together with the Biryani make the ultimate weekend family feast. Outstanding service, warm aroma, and unmistakable pride."
+            </p>
+</div>
+<div class="mt-space-lg pt-space-sm flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-md flex items-center justify-center font-bold">AK</div>
+<div>
+<h5 class="font-label-md text-label-md text-on-surface">Ayesha K.</h5>
+<span class="font-label-sm text-label-sm text-outline">Food Enthusiast</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-xl rounded-2xl shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div>
+<div class="flex items-center text-primary mb-space-sm">
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface italic">
+              "Ordered takeaway for our family party of 25 people. Everyone was raving about the BBQ platter and Mutton Biryani. Hot, fresh, and exceptionally generous portions."
+            </p>
+</div>
+<div class="mt-space-lg pt-space-sm flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-md flex items-center justify-center font-bold">BS</div>
+<div>
+<h5 class="font-label-md text-label-md text-on-surface">Bilal S.</h5>
+<span class="font-label-sm text-label-sm text-outline">Family Host</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 10. POWERFUL DELIVERY & TAKEAWAY CTA -->
+<section class="py-space-3xl bg-surface-container-high text-on-surface">
+<div class="max-w-[1280px] mx-auto px-page-margin-mobile md:px-page-margin-tablet lg:px-page-margin-desktop">
+<div class="bg-inverse-surface text-inverse-on-surface rounded-3xl overflow-hidden shadow-2xl grid grid-cols-1 lg:grid-cols-12 items-center">
+<!-- Left Banner Details -->
+<div class="p-space-xl lg:p-space-3xl lg:col-span-7 flex flex-col gap-space-md">
+<span class="px-space-sm py-1 rounded bg-primary text-on-primary font-label-caps text-label-caps uppercase w-max tracking-wider">
+            Fast Delivery &amp; Express Pickup
+          </span>
+<h2 class="font-headline-xl text-headline-xl text-inverse-on-surface leading-tight">
+            Biryani Cravings? <br/>
+<span class="text-primary-container italic">We’ve Got You Covered.</span>
+</h2>
+<p class="font-body-lg text-body-lg text-outline-variant max-w-lg">
+            Dine in, pick it up, or enjoy Zero Biryani from the comfort of home. Packaged in heat-sealed luxury thermal boxes so it lands at your table steaming hot.
+          </p>
+<div class="flex flex-wrap items-center gap-space-md pt-space-xs">
+<a class="px-space-xl py-space-sm bg-primary-container hover:bg-primary text-on-primary-container hover:text-on-primary font-label-caps text-label-caps uppercase tracking-wider rounded-lg shadow-md transition-colors flex items-center gap-space-xs" href="#menu">
+<span>Order Delivery</span>
+<span class="material-symbols-outlined text-[18px]">delivery_dining</span>
+</a>
+<a class="px-space-xl py-space-sm bg-secondary hover:bg-secondary-container text-on-secondary hover:text-on-secondary-container font-label-caps text-label-caps uppercase tracking-wider rounded-lg transition-colors flex items-center gap-space-xs" href="#menu">
+<span>Order Takeaway</span>
+<span class="material-symbols-outlined text-[18px]">takeout_dining</span>
+</a>
+</div>
+</div>
+<!-- Right Takeaway Photo Banner -->
+<div class="lg:col-span-5 h-72 lg:h-full relative overflow-hidden">
+<img alt="Zero Biryani Premium Takeaway Box and Naan Package" class="w-full h-full object-cover object-center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcLB8FCfh3x3HVUVJG_za4hSOpWnFbjM7rvlj3Yn8fbO7xV7CIw5Ij6CMk0veeFgjhYDmxhGUDzdJwR4pZG2nCLSJmx06GdqyREA1J9-ARA_1WNGGaRr84kT7vxPGbl3K80ei_OcRQvVic559QLMjbjcIvVedWcsrjSNehDOduhIJHI86K6jhJb6IgFxpVOfYbV7b3sry-6UxBLDk8sSo36ZLgAIvoxJkvSoYk6L9CASk9coqxaWlXsw"/>
+</div>
+</div>
+</div>
+</section>
+<!-- 11. LOCATION & CONTACT -->
+<section class="py-space-3xl lg:py-space-4xl bg-surface text-on-surface">
+<div class="max-w-[1280px] mx-auto px-page-margin-mobile md:px-page-margin-tablet lg:px-page-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-grid-gutter-desktop items-stretch">
+<!-- Left: Map Container with data-location -->
+<div class="lg:col-span-7 flex flex-col justify-between">
+<div>
+<span class="font-label-caps text-label-caps text-primary uppercase tracking-widest block mb-space-2xs">Visit Us In Person</span>
+<h2 class="font-headline-xl text-headline-xl text-on-surface mb-space-md">Find Our Dining Hall</h2>
+</div>
+<div class="w-full h-80 lg:h-96 rounded-2xl shadow-md overflow-hidden relative group bg-surface-container" data-location="Gulshan-e-Iqbal Block 4, Karachi, Pakistan" style="">
+<!-- Simulated Map Canvas Overlay with Direct Navigation Badge -->
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Stylized modern city road map of Gulshan-e-Iqbal Karachi with clean warm amber roads, highlighted block borders, and modern culinary district markers in warm tones." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBhMiOmzBpF0f-LS9d90LuUv1tCPv_8-oOlmsSso5BL1R9q5I7bzSHW9caRG6XPkuhrpXRFsVqsy26PGp17U21vLrRGeTbv0dzQvAIIvRE9a6S2_VPplYvUwfd7ERrKnlV6Wahoqtq6I8xJXKzJqaxMxlgThFifonC5lDkgGI-DkeIBOd1duM9b3TkqYfhYuvPGDMvJsgIATSxdZK7-r6nIA9114bonmyamzf6OHgP_W37BxdZCEydnVA')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/80 via-transparent to-transparent flex items-end p-space-md">
+<div class="bg-surface-bright/95 backdrop-blur px-space-md py-space-xs rounded-xl shadow flex items-center justify-between w-full">
+<div class="flex items-center gap-space-xs text-on-surface">
+<span class="material-symbols-outlined text-secondary text-[22px]">location_on</span>
+<span class="font-label-md text-label-md">Gulshan-e-Iqbal, Block 4, Karachi</span>
+</div>
+<a class="px-space-sm py-1 bg-primary text-on-primary font-label-caps text-label-caps uppercase rounded hover:bg-primary-container hover:text-on-primary-container transition-colors" href="https://maps.google.com" target="_blank">
+                  Get Directions
+                </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Right: Contact & Hours Details Card -->
+<div class="lg:col-span-5 bg-surface-container-low p-space-xl rounded-2xl shadow-md flex flex-col justify-between mt-space-lg lg:mt-0">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-space-md">Connect With Us</h3>
+<div class="flex flex-col gap-space-md">
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-primary-fixed text-on-primary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">pin_drop</span>
+</div>
+<div>
+<h5 class="font-label-md text-label-md text-on-surface">Restaurant Location</h5>
+<p class="font-body-md text-body-md text-on-surface-variant">Plot 12-C, Main Commercial Boulevard, Block 4, Gulshan-e-Iqbal, Karachi</p>
+</div>
+</div>
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">call</span>
+</div>
+<div>
+<h5 class="font-label-md text-label-md text-on-surface">Direct Call &amp; Hotline</h5>
+<p class="font-body-md text-body-md text-on-surface-variant">+92 (21) 3456-7890 / +92 300 1234567</p>
+<a class="text-primary hover:underline font-label-sm text-label-sm uppercase tracking-wider block mt-1" href="tel:+922134567890">Call Now for Catering</a>
+</div>
+</div>
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">schedule</span>
+</div>
+<div>
+<h5 class="font-label-md text-label-md text-on-surface">Hours of Operation</h5>
+<p class="font-body-md text-body-md text-on-surface-variant">Monday – Sunday: 12:00 PM – 11:30 PM</p>
+<span class="font-label-sm text-label-sm text-primary">Open 7 Days a Week • Lunch &amp; Dinner</span>
+</div>
+</div>
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high text-on-surface flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">mail</span>
+</div>
+<div>
+<h5 class="font-label-md text-label-md text-on-surface">Catering &amp; Events Inquiry</h5>
+<p class="font-body-md text-body-md text-on-surface-variant">banquets@zerobiryani.com</p>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-space-lg pt-space-md">
+<a class="w-full py-space-sm bg-secondary hover:bg-secondary-container text-on-secondary hover:text-on-secondary-container uppercase font-label-caps text-label-caps tracking-widest rounded-lg transition-colors flex items-center justify-center gap-space-2xs shadow" href="tel:+922134567890">
+<span class="material-symbols-outlined text-[18px]">phone_forwarded</span>
+<span>Speak to Head Chef / Manager</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Lightweight Script for Menu Category Filter Micro-Interaction -->
+<script>
+    (function() {
+      const filterButtons = document.querySelectorAll('.menu-tab-btn');
+      const dishes = document.querySelectorAll('.dish-item');
+
+      filterButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          // Reset styles
+          filterButtons.forEach(b => {
+            b.classList.remove('bg-primary', 'text-on-primary');
+            b.classList.add('bg-surface-container-high', 'text-on-surface');
+          });
+
+          // Active style
+          btn.classList.remove('bg-surface-container-high', 'text-on-surface');
+          btn.classList.add('bg-primary', 'text-on-primary');
+
+          const category = btn.getAttribute('data-filter');
+
+          dishes.forEach(dish => {
+            if (category === 'all' || dish.classList.contains(category)) {
+              dish.style.display = 'flex';
+            } else {
+              dish.style.display = 'none';
+            }
+          });
+        });
+      });
+    })();
+  </script>
+</div></main><footer class="w-full bg-inverse-surface text-inverse-on-surface"><div class="max-w-[1280px] mx-auto px-page-margin-mobile md:px-page-margin-tablet lg:px-page-margin-desktop pt-space-3xl pb-space-xl"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-grid-gutter-desktop"><div class="lg:col-span-4 flex flex-col gap-space-sm"><div class="flex items-center gap-space-sm"><span class="font-headline-lg text-headline-lg text-primary-fixed">Zero Biryani</span></div><p class="font-body-md text-body-md text-outline-variant">10+ Years of Authentic Taste. Purdah slow-cooked handi traditions honoring authentic spice heritage and celebration banquets.</p><div class="flex items-center gap-space-xs mt-space-2xs"><span class="material-symbols-outlined text-primary-fixed text-[20px]">verified</span><span class="font-label-caps text-label-caps text-tertiary-fixed uppercase">Heritage Certified Cuisine</span></div></div><div class="lg:col-span-2 flex flex-col gap-space-xs"><span class="font-label-caps text-label-caps text-primary-fixed uppercase mb-space-2xs">Explore</span><a class="font-body-md text-body-md text-outline-variant hover:text-primary-fixed transition-colors" data-path="home" href="#">Home</a><a class="font-body-md text-body-md text-outline-variant hover:text-primary-fixed transition-colors" data-path="menu" href="#">Menu</a><a class="font-body-md text-body-md text-outline-variant hover:text-primary-fixed transition-colors" data-path="about-us" href="#">About Us</a><a class="font-body-md text-body-md text-outline-variant hover:text-primary-fixed transition-colors" data-path="gallery" href="#">Gallery</a><a class="font-body-md text-body-md text-outline-variant hover:text-primary-fixed transition-colors" data-path="reviews" href="#">Reviews</a><a class="font-body-md text-body-md text-outline-variant hover:text-primary-fixed transition-colors" data-path="contact" href="#">Contact</a></div><div class="lg:col-span-3 flex flex-col gap-space-xs"><span class="font-label-caps text-label-caps text-primary-fixed uppercase mb-space-2xs">Services</span><div class="flex items-center gap-space-xs text-outline-variant font-body-md text-body-md"><span class="material-symbols-outlined text-[18px] text-primary-fixed">restaurant</span><span>Dine In Experience</span></div><div class="flex items-center gap-space-xs text-outline-variant font-body-md text-body-md"><span class="material-symbols-outlined text-[18px] text-primary-fixed">takeout_dining</span><span>Takeaway Matka Pots</span></div><div class="flex items-center gap-space-xs text-outline-variant font-body-md text-body-md"><span class="material-symbols-outlined text-[18px] text-primary-fixed">delivery_dining</span><span>Fast Direct Delivery</span></div></div><div class="lg:col-span-3 flex flex-col gap-space-xs"><span class="font-label-caps text-label-caps text-primary-fixed uppercase mb-space-2xs">Hours &amp; Contact</span><p class="font-body-md text-body-md text-outline-variant">Mon - Sun: 12:00 PM – 12:00 AM</p><p class="font-body-md text-body-md text-outline-variant">Gulshan-e-Iqbal, Block 4, Karachi</p><p class="font-body-md text-body-md text-outline-variant">Phone: +92 (21) 3456-7890</p><div class="flex items-center gap-space-sm mt-space-xs"><span class="material-symbols-outlined text-outline-variant hover:text-primary-fixed cursor-pointer text-[20px] transition-colors">photo_camera</span><span class="material-symbols-outlined text-outline-variant hover:text-primary-fixed cursor-pointer text-[20px] transition-colors">share</span><span class="material-symbols-outlined text-outline-variant hover:text-primary-fixed cursor-pointer text-[20px] transition-colors">play_circle</span></div></div></div><div class="mt-space-2xl pt-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-sm text-outline-variant"><span class="font-body-md text-body-md">© Zero Biryani — All Rights Reserved.</span><span class="font-label-caps text-label-caps text-tertiary-fixed uppercase">Crafted with Dum Pukht Heritage</span></div></div></footer></body></html>

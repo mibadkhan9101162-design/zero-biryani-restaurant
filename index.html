@@ -1363,7 +1363,7 @@
       <div class="p-5 border-t border-outline-variant/20 bg-surface-container-low space-y-3">
         <!-- Promo Code Input -->
         <div class="flex gap-2">
-          <input id="promo-input" type="text" placeholder="Promo code (e.g. DUM10)" class="flex-1 px-3 py-2 text-sm bg-surface-container-lowest rounded-lg border border-outline-variant/30 uppercase focus:outline-none focus:border-primary" />
+          <input id="promo-input" type="text" placeholder="Promo code (DANIYAL / DANI / JHONNY)" class="flex-1 px-3 py-2 text-sm bg-surface-container-lowest rounded-lg border border-outline-variant/30 uppercase focus:outline-none focus:border-primary" />
           <button id="apply-promo-btn" class="px-4 py-2 bg-surface-container-highest hover:bg-primary hover:text-on-primary text-xs uppercase font-bold rounded-lg transition-colors">Apply</button>
         </div>
         <span id="promo-message" class="hidden"></span>
@@ -1485,6 +1485,12 @@
             <label class="block text-xs font-bold uppercase tracking-wider text-outline mb-1">Contact Phone</label>
             <input name="customer_phone" required type="tel" placeholder="e.g. 0300-1234567" class="w-full bg-surface-container-low px-3 py-2 rounded-lg text-sm text-on-surface border border-outline-variant/30 focus:outline-none focus:border-primary" />
           </div>
+        </div>
+
+        <!-- Customer Email for delivery notification -->
+        <div>
+          <label class="block text-xs font-bold uppercase tracking-wider text-outline mb-1">Your Email <span class="text-primary">(Delivery notification will be sent here)</span></label>
+          <input name="customer_email" required type="email" placeholder="e.g. yourname@email.com" class="w-full bg-surface-container-low px-3 py-2 rounded-lg text-sm text-on-surface border border-outline-variant/30 focus:outline-none focus:border-primary" />
         </div>
 
         <!-- Address group for delivery -->

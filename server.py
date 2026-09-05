@@ -6,6 +6,22 @@ import os
 import urllib.parse
 from datetime import datetime
 import random
+import smtplib
+import threading
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+
+# ============================================================
+# EMAIL CONFIGURATION
+# Uses Gmail SMTP. The sender must be a Gmail account with
+# an App Password (not normal password) if 2FA is enabled.
+# Generate an App Password at: https://myaccount.google.com/apppasswords
+# ============================================================
+EMAIL_SENDER    = "mibadkhan9101162@gmail.com"   # Gmail account sending the emails
+EMAIL_PASSWORD  = "YOUR_GMAIL_APP_PASSWORD_HERE"  # Replace with your Gmail App Password
+EMAIL_RECEIVER  = "mibadkhan9101162@gmail.com"   # Restaurant owner email
+SMTP_SERVER     = "smtp.gmail.com"
+SMTP_PORT       = 587
 
 PORT = 8000
 DB_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "restaurant.db")
@@ -43,6 +59,7 @@ def init_db():
         table_number TEXT,
         customer_name TEXT NOT NULL,
         customer_phone TEXT NOT NULL,
+        customer_email TEXT DEFAULT '',
         delivery_address TEXT,
         notes TEXT,
         payment_method TEXT NOT NULL,
@@ -154,6 +171,130 @@ def init_db():
         
     conn.commit()
     conn.close()
+
+# ============================================================
+# EMAIL FUNCTIONS
+# ============================================================
+def send_email(to_address, subject, html_body):
+    """Send an HTML email via Gmail SMTP. Runs silently on failure."""
+    try:
+        msg = MIMEMultipart('alternative')
+        msg['Subject'] = subject
+        msg['From']    = EMAIL_SENDER
+        msg['To']      = to_address
+        msg.attach(MIMEText(html_body, 'html'))
+
+        with smtplib.SMTP(SMTP_SERVER, SMTP_PORT) as server:
+            server.ehlo()
+            server.starttls()
+            server.login(EMAIL_SENDER, EMAIL_PASSWORD)
+            server.sendmail(EMAIL_SENDER, to_address, msg.as_string())
+        print(f"[EMAIL] Sent to {to_address}: {subject}")
+    except Exception as e:
+        print(f"[EMAIL ERROR] Could not send to {to_address}: {e}")
+
+
+def notify_restaurant(order):
+    """Send a detailed order notification email to the restaurant owner."""
+    items = order.get('items', [])
+    items_rows = "".join([
+        f"<tr><td style='padding:6px 10px;border-bottom:1px solid #e8d5a3'>{i.get('quantity',1)}x</td>"
+        f"<td style='padding:6px 10px;border-bottom:1px solid #e8d5a3'>{i.get('name','')}</td>"
+        f"<td style='padding:6px 10px;border-bottom:1px solid #e8d5a3'>{i.get('spice','Medium')}</td>"
+        f"<td style='padding:6px 10px;border-bottom:1px solid #e8d5a3;text-align:right'>${float(i.get('price',0))*int(i.get('quantity',1)):.2f}</td></tr>"
+        for i in items
+    ])
+
+    promo_row = ""
+    if float(order.get('discount', 0)) > 0:
+        promo_row = f"<tr><td colspan='2' style='padding:4px 10px;color:#d97706;font-weight:bold'>Promo Discount:</td><td colspan='2' style='padding:4px 10px;text-align:right;color:#d97706'>-${float(order.get('discount',0)):.2f}</td></tr>"
+
+    html = f"""
+    <html><body style='font-family:Arial,sans-serif;background:#fdf8f0;margin:0;padding:0'>
+    <div style='max-width:600px;margin:20px auto;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,0.1)'>
+      <div style='background:linear-gradient(135deg,#1a0a00,#3d1800);padding:24px 30px;color:#f0c050;text-align:center'>
+        <h1 style='margin:0;font-size:26px;letter-spacing:2px'>🍛 NEW ORDER — ZERO BIRYANI</h1>
+        <p style='margin:8px 0 0;color:#e8d5a3;font-size:14px'>Order Reference: <strong>{order['order_number']}</strong></p>
+      </div>
+      <div style='padding:24px 30px'>
+        <table width='100%' cellpadding='0' cellspacing='0' style='margin-bottom:20px'>
+          <tr><td style='color:#666;font-size:13px;padding:4px 0'>Customer Name:</td><td style='font-weight:bold;font-size:14px;text-align:right'>{order['customer_name']}</td></tr>
+          <tr><td style='color:#666;font-size:13px;padding:4px 0'>Phone:</td><td style='font-weight:bold;font-size:14px;text-align:right'>{order['customer_phone']}</td></tr>
+          <tr><td style='color:#666;font-size:13px;padding:4px 0'>Email:</td><td style='font-weight:bold;font-size:14px;text-align:right'>{order.get('customer_email','N/A')}</td></tr>
+          <tr><td style='color:#666;font-size:13px;padding:4px 0'>Order Type:</td><td style='font-weight:bold;font-size:14px;text-align:right;text-transform:uppercase'>{order['order_type']}</td></tr>
+          {'<tr><td style="color:#666;font-size:13px;padding:4px 0">Delivery Address:</td><td style="font-weight:bold;font-size:14px;text-align:right">' + str(order.get('delivery_address','')) + '</td></tr>' if order.get('delivery_address') else ''}
+          {'<tr><td style="color:#666;font-size:13px;padding:4px 0">Table Number:</td><td style="font-weight:bold;font-size:14px;text-align:right">' + str(order.get('table_number','')) + '</td></tr>' if order.get('table_number') else ''}
+          {'<tr><td style="color:#666;font-size:13px;padding:4px 0">Notes:</td><td style="font-size:13px;text-align:right;color:#555">' + str(order.get('notes','')) + '</td></tr>' if order.get('notes') else ''}
+          <tr><td style='color:#666;font-size:13px;padding:4px 0'>Payment:</td><td style='font-weight:bold;font-size:14px;text-align:right;text-transform:uppercase'>{order['payment_method']}</td></tr>
+          <tr><td style='color:#666;font-size:13px;padding:4px 0'>Ordered At:</td><td style='font-weight:bold;font-size:14px;text-align:right'>{order['created_at']}</td></tr>
+        </table>
+
+        <h3 style='color:#1a0a00;margin-bottom:8px;border-bottom:2px solid #f0c050;padding-bottom:6px'>Ordered Items</h3>
+        <table width='100%' cellpadding='0' cellspacing='0' style='font-size:13px'>
+          <tr style='background:#fdf8f0'>
+            <th style='padding:6px 10px;text-align:left'>Qty</th>
+            <th style='padding:6px 10px;text-align:left'>Item</th>
+            <th style='padding:6px 10px;text-align:left'>Spice</th>
+            <th style='padding:6px 10px;text-align:right'>Price</th>
+          </tr>
+          {items_rows}
+        </table>
+
+        <table width='100%' cellpadding='0' cellspacing='0' style='margin-top:16px;font-size:13px'>
+          <tr><td colspan='2' style='padding:4px 10px'>Subtotal:</td><td colspan='2' style='padding:4px 10px;text-align:right'>${float(order['subtotal']):.2f}</td></tr>
+          {promo_row}
+          <tr><td colspan='2' style='padding:4px 10px'>Delivery Fee:</td><td colspan='2' style='padding:4px 10px;text-align:right'>${float(order['delivery_fee']):.2f}</td></tr>
+          <tr><td colspan='2' style='padding:4px 10px'>Tax:</td><td colspan='2' style='padding:4px 10px;text-align:right'>${float(order['tax']):.2f}</td></tr>
+          <tr style='font-size:16px;font-weight:bold;color:#1a0a00;background:#f0c050'>
+            <td colspan='2' style='padding:8px 10px'>TOTAL DUE:</td>
+            <td colspan='2' style='padding:8px 10px;text-align:right'>${float(order['total']):.2f}</td>
+          </tr>
+        </table>
+      </div>
+      <div style='background:#1a0a00;padding:14px 30px;text-align:center;color:#e8d5a3;font-size:12px'>
+        Zero Biryani — Authentic Dum Pukht Pakistani Restaurant
+      </div>
+    </div>
+    </body></html>
+    """
+    subject = f"🍛 New Order {order['order_number']} — {order['customer_name']} — ${float(order['total']):.2f}"
+    threading.Thread(target=send_email, args=(EMAIL_RECEIVER, subject, html), daemon=True).start()
+
+
+def send_delivery_notification(customer_email, customer_name, order_number, total):
+    """Send the 5-minute delayed parcel delivery notification to the customer."""
+    html = f"""
+    <html><body style='font-family:Arial,sans-serif;background:#fdf8f0;margin:0;padding:0'>
+    <div style='max-width:540px;margin:30px auto;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,0.1)'>
+      <div style='background:linear-gradient(135deg,#1a0a00,#3d1800);padding:28px 30px;color:#f0c050;text-align:center'>
+        <div style='font-size:48px'>🛵</div>
+        <h1 style='margin:8px 0 0;font-size:22px;letter-spacing:1px'>Your Biryani is On Its Way!</h1>
+      </div>
+      <div style='padding:28px 30px;text-align:center'>
+        <p style='font-size:16px;color:#333'>Dear <strong>{customer_name}</strong>,</p>
+        <p style='font-size:15px;color:#555;line-height:1.7'>
+          Great news! Your order <strong style='color:#1a0a00'>{order_number}</strong> has been carefully sealed
+          in our signature dum pukht handis and is now on its way to you. 🍛
+        </p>
+        <div style='background:#fdf8f0;border:2px solid #f0c050;border-radius:10px;padding:18px;margin:20px 0'>
+          <p style='margin:0;font-size:20px;font-weight:bold;color:#1a0a00'>Parcel will be delivered to you</p>
+          <p style='margin:8px 0 0;font-size:13px;color:#666'>Estimated arrival: 30–45 minutes from order time</p>
+        </div>
+        <p style='font-size:13px;color:#888'>Order Total: <strong>${total:.2f}</strong></p>
+        <p style='font-size:13px;color:#888'>Thank you for choosing Zero Biryani. Enjoy your meal! 🙏</p>
+      </div>
+      <div style='background:#1a0a00;padding:14px 30px;text-align:center;color:#e8d5a3;font-size:12px'>
+        Zero Biryani — Authentic Dum Pukht Pakistani Restaurant
+      </div>
+    </div>
+    </body></html>
+    """
+    subject = f"🛵 Your Order {order_number} is On Its Way — Zero Biryani"
+    # Schedule to send after 5 minutes (300 seconds)
+    timer = threading.Timer(300, send_email, args=(customer_email, subject, html))
+    timer.daemon = True
+    timer.start()
+    print(f"[EMAIL] Delivery notification for {order_number} scheduled in 5 minutes to {customer_email}")
 
 class RestaurantRequestHandler(http.server.SimpleHTTPRequestHandler):
     def send_cors_headers(self):
@@ -309,6 +450,7 @@ class RestaurantRequestHandler(http.server.SimpleHTTPRequestHandler):
                 table_number = data.get("table_number", "")
                 customer_name = data.get("customer_name", "Guest")
                 customer_phone = data.get("customer_phone", "")
+                customer_email = data.get("customer_email", "")
                 delivery_address = data.get("delivery_address", "")
                 notes = data.get("notes", "")
                 payment_method = data.get("payment_method", "cash")
@@ -321,11 +463,36 @@ class RestaurantRequestHandler(http.server.SimpleHTTPRequestHandler):
                 created_at = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
                 cursor.execute('''
-                INSERT INTO orders (order_number, order_type, table_number, customer_name, customer_phone, delivery_address, notes, payment_method, items_json, subtotal, discount, delivery_fee, tax, total, status, created_at)
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'Received', ?)
-                ''', (order_num, order_type, table_number, customer_name, customer_phone, delivery_address, notes, payment_method, json.dumps(items), subtotal, discount, delivery_fee, tax, total, created_at))
+                INSERT INTO orders (order_number, order_type, table_number, customer_name, customer_phone, customer_email, delivery_address, notes, payment_method, items_json, subtotal, discount, delivery_fee, tax, total, status, created_at)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'Received', ?)
+                ''', (order_num, order_type, table_number, customer_name, customer_phone, customer_email, delivery_address, notes, payment_method, json.dumps(items), subtotal, discount, delivery_fee, tax, total, created_at))
                 conn.commit()
                 order_id = cursor.lastrowid
+
+                # Build order dict for email
+                email_order = {
+                    'order_number': order_num,
+                    'order_type': order_type,
+                    'table_number': table_number,
+                    'customer_name': customer_name,
+                    'customer_phone': customer_phone,
+                    'customer_email': customer_email,
+                    'delivery_address': delivery_address,
+                    'notes': notes,
+                    'payment_method': payment_method,
+                    'items': items,
+                    'subtotal': subtotal,
+                    'discount': discount,
+                    'delivery_fee': delivery_fee,
+                    'tax': tax,
+                    'total': total,
+                    'created_at': created_at
+                }
+                # Send restaurant notification immediately (in background thread)
+                notify_restaurant(email_order)
+                # Send customer delivery notification after 5 minutes
+                if customer_email:
+                    send_delivery_notification(customer_email, customer_name, order_num, total)
 
                 self.send_json(201, {
                     "status": "success",

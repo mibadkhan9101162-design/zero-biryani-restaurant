@@ -373,20 +373,27 @@
     const code = (els.promoInput.value || '').trim().toUpperCase();
     if (!code) return;
 
-    if (code === 'DUM10' || code === 'ZERO10') {
-      state.discountPercent = 10;
-      state.promoCode = code;
-      els.promoMessage.textContent = 'Promo applied! 10% discount added.';
-      els.promoMessage.className = 'text-sm text-green-600 font-bold block mt-1';
-      showToast('10% Discount applied with ' + code + '!', 'success');
-    } else if (code === 'BIRYANI20' || code === 'HERITAGE20') {
+    // DANIYAL = 20% off, DANI = 50% off, JHONNY = 100% off
+    if (code === 'DANIYAL') {
       state.discountPercent = 20;
       state.promoCode = code;
-      els.promoMessage.textContent = 'Special promo applied! 20% discount added.';
+      els.promoMessage.textContent = '🎉 Promo DANIYAL applied! 20% discount unlocked.';
       els.promoMessage.className = 'text-sm text-green-600 font-bold block mt-1';
-      showToast('20% Discount applied with ' + code + '!', 'success');
+      showToast('20% Discount applied with DANIYAL!', 'success');
+    } else if (code === 'DANI') {
+      state.discountPercent = 50;
+      state.promoCode = code;
+      els.promoMessage.textContent = '🎉 Promo DANI applied! 50% discount unlocked.';
+      els.promoMessage.className = 'text-sm text-green-600 font-bold block mt-1';
+      showToast('50% Discount applied with DANI!', 'success');
+    } else if (code === 'JHONNY') {
+      state.discountPercent = 100;
+      state.promoCode = code;
+      els.promoMessage.textContent = '🎉 Promo JHONNY applied! 100% discount — FREE ORDER!';
+      els.promoMessage.className = 'text-sm text-green-600 font-bold block mt-1';
+      showToast('100% Discount applied with JHONNY — It\'s on the house!', 'success');
     } else {
-      els.promoMessage.textContent = 'Invalid promo code. Try DUM10 or BIRYANI20';
+      els.promoMessage.textContent = '❌ Invalid promo code. Valid codes: DANIYAL (20%), DANI (50%), JHONNY (100%)';
       els.promoMessage.className = 'text-sm text-error font-bold block mt-1';
       showToast('Invalid coupon code', 'error');
     }
@@ -519,6 +526,7 @@
     const orderType = formData.get('order_type') || 'delivery';
     const customerName = formData.get('customer_name');
     const customerPhone = formData.get('customer_phone');
+    const customerEmail = formData.get('customer_email') || '';
     const deliveryAddress = formData.get('delivery_address') || '';
     const tableNumber = formData.get('table_number') || '';
     const notes = formData.get('notes') || '';
@@ -526,6 +534,11 @@
 
     if (!customerName || !customerPhone) {
       showToast('Please provide your name and contact phone number.', 'error');
+      return;
+    }
+
+    if (!customerEmail) {
+      showToast('Please provide your email to receive delivery updates.', 'error');
       return;
     }
 
@@ -546,6 +559,7 @@
       table_number: tableNumber,
       customer_name: customerName,
       customer_phone: customerPhone,
+      customer_email: customerEmail,
       delivery_address: deliveryAddress,
       notes: notes,
       payment_method: paymentMethod,
